@@ -23,7 +23,19 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-Todavía no hay ninguna versión publicada.
+**Última versión para Android: 0.16.0**, del 28 de octubre de 2026 · Android 7.0 o superior · 40,7 MB
+
+[Descargar claqueta-0.16.0.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.0/claqueta-0.16.0.apk) · SHA-256 `0e2864ebc960060c2b766c9ad4071cc34a5c598aed5dce5883c7d803d416610e`
+
+### 0.16.0 · 28 de octubre de 2026
+- La app se actualiza sola: avisa cuando hay una versión nueva, enseña sus novedades y la instala con un toque.
+- En Ajustes › Acerca de: la versión instalada, buscar actualizaciones y las novedades de cada versión.
+- Desde Recientes y Favoritos, el reproductor enseña la guía de esos canales y cambia de canal sin salir de la lista.
+- Con datos móviles, el reproductor pregunta antes de empezar un canal de internet.
+- Las estaciones web cuentan como canales normales, también para anterior y siguiente; la etiqueta WEB queda solo para las páginas que se abren tal cual.
+- La guía del reproductor enseña solo lo que hay: los canales, la programación, las dos o ninguna.
+- «Continuar viendo» guarda cualquier vídeo que dejes a medias, aunque después cambies muchas veces de canal.
+- Las películas de webs de vídeo se encuentran mejor con una conexión lenta, y si no se pueden abrir, la app dice por qué.
 <!-- novedades:fin -->
 
 ## Cómo llegan aquí las versiones

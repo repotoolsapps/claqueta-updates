@@ -1,8 +1,35 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-28T21:00:00Z",
-  "android": null,
+  "updated": "2026-10-28T23:37:02Z",
+  "android": {
+    "versionCode": 16,
+    "versionName": "0.16.0",
+    "date": "2026-10-28",
+    "minSdk": 24,
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.0/claqueta-0.16.0.apk",
+    "size": 40745436,
+    "sha256": "0e2864ebc960060c2b766c9ad4071cc34a5c598aed5dce5883c7d803d416610e",
+    "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
+  },
   "ios": null,
-  "releases": []
+  "releases": [
+    {
+      "version": "0.16.0",
+      "date": "2026-10-28",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "La app se actualiza sola: avisa cuando hay una versión nueva, enseña sus novedades y la instala con un toque.",
+        "En Ajustes › Acerca de: la versión instalada, buscar actualizaciones y las novedades de cada versión.",
+        "Desde Recientes y Favoritos, el reproductor enseña la guía de esos canales y cambia de canal sin salir de la lista.",
+        "Con datos móviles, el reproductor pregunta antes de empezar un canal de internet.",
+        "Las estaciones web cuentan como canales normales, también para anterior y siguiente; la etiqueta WEB queda solo para las páginas que se abren tal cual.",
+        "La guía del reproductor enseña solo lo que hay: los canales, la programación, las dos o ninguna.",
+        "«Continuar viendo» guarda cualquier vídeo que dejes a medias, aunque después cambies muchas veces de canal.",
+        "Las películas de webs de vídeo se encuentran mejor con una conexión lenta, y si no se pueden abrir, la app dice por qué."
+      ]
+    }
+  ]
 }
