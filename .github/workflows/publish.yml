@@ -1,0 +1,156 @@
+# Publica la entrega que deja el workflow Release del repositorio privado de Claqueta en la rama incoming: comprueba
+# el APK, crea la release vX.Y.Z con el APK, actualiza updates.json y el README en main y borra incoming, para que
+# el APK no se quede en el historial de git. Volver a ejecutarlo es seguro: lo que ya está hecho no cambia.
+name: Publicar versión
+
+on:
+  push:
+    branches: [incoming]
+
+permissions:
+  contents: write
+
+# Una publicación detrás de otra y ninguna cancelada: ni a medias ni en la cola (con «queue: max» esperan su turno
+# hasta 100; con el valor por defecto, una nueva cancelaría a la que ya esperaba).
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+  queue: max
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  publicar:
+    name: Publicar la entrega
+    # Solo un push a incoming; nunca una pull request.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/incoming'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Descargar la entrega
+        uses: actions/checkout@v7
+        with:
+          path: entrega
+          persist-credentials: false
+
+      - name: Descargar main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          path: sitio
+
+      # Los scripts salen de main, no de la entrega.
+      - name: Comprobar la entrega
+        id: entrega
+        run: |
+          python3 sitio/scripts/feed.py validate --incoming entrega/incoming --feed sitio/updates.json \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Notas de la versión
+        run: |
+          python3 sitio/scripts/feed.py notes --release entrega/incoming/release.json --repo "$GITHUB_REPOSITORY" \
+            --out "$RUNNER_TEMP/notas.md"
+
+      - name: Release ${{ steps.entrega.outputs.tag }}
+        env:
+          TAG: ${{ steps.entrega.outputs.tag }}
+          VERSION_NAME: ${{ steps.entrega.outputs.version_name }}
+          ASSET_NAME: ${{ steps.entrega.outputs.asset_name }}
+          SHA256: ${{ steps.entrega.outputs.sha256 }}
+        run: |
+          apk="entrega/incoming/$ASSET_NAME"
+          title="Claqueta $VERSION_NAME"
+          # ¿Existe ya, publicada o en borrador? Una ejecución anterior puede haberla dejado a medias. (Sin «| head»:
+          # cortarle la salida a gh con pipefail haría fallar el paso.)
+          release_ids="$(gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" --paginate \
+            --jq '.[] | select(.tag_name == env.TAG) | .id')"
+          release_id="${release_ids%%$'\n'*}"
+          if [ -z "$release_id" ]; then
+            gh release create "$TAG" "$apk" --title "$title" --notes-file "$RUNNER_TEMP/notas.md" \
+              --target "$(git -C sitio rev-parse HEAD)" --latest
+            echo "Creada la release $TAG."
+          else
+            echo "La release $TAG ya existía: se completa."
+            digest="$(gh api "repos/$GITHUB_REPOSITORY/releases/$release_id/assets?per_page=100" --paginate \
+              --jq '.[] | select(.name == env.ASSET_NAME) | .digest // ""')"
+            if [ "$digest" = "sha256:$SHA256" ]; then
+              echo "$ASSET_NAME ya estaba subido."
+            else
+              gh release upload "$TAG" "$apk" --clobber
+            fi
+            gh release edit "$TAG" --title "$title" --notes-file "$RUNNER_TEMP/notas.md" --draft=false --latest
+          fi
+
+      # La app descargará justo esta URL: se comprueba que, ya pública, da el mismo APK.
+      - name: Comprobar la descarga pública
+        env:
+          ASSET_URL: ${{ steps.entrega.outputs.asset_url }}
+          SHA256: ${{ steps.entrega.outputs.sha256 }}
+          SIZE: ${{ steps.entrega.outputs.size }}
+        run: |
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 5 -o "$RUNNER_TEMP/descarga.apk" "$ASSET_URL"
+          got_sha="$(sha256sum "$RUNNER_TEMP/descarga.apk" | cut -d ' ' -f 1)"
+          got_size="$(stat -c %s "$RUNNER_TEMP/descarga.apk")"
+          if [ "$got_sha" != "$SHA256" ] || [ "$got_size" != "$SIZE" ]; then
+            echo "::error::$ASSET_URL no da el APK de la entrega ($got_size bytes, SHA-256 $got_sha)."
+            exit 1
+          fi
+          echo "$ASSET_URL da el APK de la entrega."
+
+      - name: Actualizar updates.json y el README en main
+        working-directory: sitio
+        env:
+          VERSION_NAME: ${{ steps.entrega.outputs.version_name }}
+        run: |
+          python3 scripts/feed.py update --release ../entrega/incoming/release.json --feed updates.json \
+            --repo "$GITHUB_REPOSITORY"
+          python3 scripts/readme.py update --readme README.md --feed updates.json
+          if git diff --quiet -- updates.json README.md; then
+            echo "main ya estaba al día."
+            exit 0
+          fi
+          git add updates.json README.md
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -q -m "Claqueta $VERSION_NAME para Android"
+          git push -q origin HEAD:main
+          echo "main actualizado: $(git rev-parse HEAD)."
+
+      # Solo si incoming sigue siendo esta entrega: si entretanto ha llegado otra, se queda para su propia ejecución.
+      - name: Borrar la rama incoming
+        working-directory: sitio
+        run: |
+          if git push -q --force-with-lease="refs/heads/incoming:$GITHUB_SHA" origin :refs/heads/incoming; then
+            echo "Rama incoming borrada."
+            exit 0
+          fi
+          current="$(git ls-remote origin refs/heads/incoming | cut -f 1)"
+          if [ -z "$current" ]; then
+            echo "La rama incoming ya no existía."
+          elif [ "$current" != "$GITHUB_SHA" ]; then
+            echo "::notice::incoming trae ya otra entrega ($current); se queda para su ejecución."
+          else
+            echo "::error::No se pudo borrar la rama incoming."
+            exit 1
+          fi
+
+      - name: Resumen
+        env:
+          TAG: ${{ steps.entrega.outputs.tag }}
+          MODE: ${{ steps.entrega.outputs.mode }}
+          ASSET_URL: ${{ steps.entrega.outputs.asset_url }}
+          SHA256: ${{ steps.entrega.outputs.sha256 }}
+        run: |
+          {
+            echo "### Claqueta $TAG publicada (entrega $MODE)"
+            echo ""
+            echo "- Release: https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG"
+            echo "- APK: $ASSET_URL"
+            echo "- SHA-256: \`$SHA256\`"
+            echo "- Feed: https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/updates.json"
+          } >> "$GITHUB_STEP_SUMMARY"

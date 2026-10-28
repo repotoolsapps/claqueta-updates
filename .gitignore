@@ -1,0 +1,6 @@
+# Los APK solo viven como assets de las releases: nunca en main.
+*.apk
+incoming/
+__pycache__/
+*.py[cod]
+.DS_Store
