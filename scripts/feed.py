@@ -2,8 +2,9 @@
 """
 El feed de actualizaciones de Claqueta (updates.json) y las entregas que llegan por la rama «incoming».
 
-    validate  Comprueba la entrega: release.json bien formado, el APK con su tamaño y su SHA-256, y un versionCode
-              mayor que el del feed (o la misma entrega ya publicada, si se repite la ejecución).
+    validate  Comprueba la entrega: release.json bien formado, el APK con su tamaño y su SHA-256, un versionCode
+              mayor que el del feed (o la misma entrega ya publicada, si se repite la ejecución) y el mismo certificado
+              de firma que la versión publicada (otro, solo si release.json trae «allowKeyChange»: true).
     notes     Escribe el texto de la release de GitHub (Markdown).
     update    Apunta el bloque «android» del feed a la release nueva y pone sus novedades arriba en «releases».
 
@@ -52,6 +53,9 @@ PLATFORMS = ("android", "ios")
 PLATFORM_NAMES = {"android": "Android", "ios": "iOS"}
 # Android acepta versionCode hasta 2^31-1, pero Google Play se queda en 2100000000: mejor no pasarse nunca.
 MAX_VERSION_CODE = 2_100_000_000
+# Tope de «size» (512 MiB), el mismo que en release_info.py: un tamaño absurdo en el feed haría que la app reservara
+# espacio y descargara sin límite. (Por la rama incoming no pasa de todas formas un archivo de más de 100 MiB.)
+MAX_APK_BYTES = 512 << 20
 ANDROID_VERSIONS = {
     24: "7.0", 25: "7.1", 26: "8.0", 27: "8.1", 28: "9", 29: "10", 30: "11", 31: "12", 32: "12L", 33: "13",
     34: "14", 35: "15", 36: "16", 37: "17",
@@ -116,7 +120,10 @@ def check_feed(feed: object) -> dict:
 
 
 def check_release(release: object) -> dict:
-    """[release] (release.json de la entrega) como dict, si tiene todos sus campos bien."""
+    """
+    [release] (release.json de la entrega) como dict, si tiene todos sus campos bien. «allowKeyChange» es opcional:
+    solo lo pone release_info.py cuando la publicación se lanzó a mano permitiendo cambiar la clave de firma.
+    """
     _check_fields("release.json", release, {
         "versionCode": _version_code, "versionName": _version_name, "date": is_date, "minSdk": _min_sdk,
         "size": _size, "sha256": _hex64, "certSha256": _hex64, "notes": _notes, "platforms": _platforms,
@@ -124,6 +131,9 @@ def check_release(release: object) -> dict:
     })
     if "android" not in release["platforms"]:
         raise FeedError("release.json no es de Android (platforms no incluye «android»)")
+    if not isinstance(release.get("allowKeyChange", False), bool):
+        raise FeedError(f"release.json: «allowKeyChange» tiene que ser true o false "
+                        f"({json.dumps(release['allowKeyChange'], ensure_ascii=False)[:80]})")
     return release
 
 
@@ -165,7 +175,7 @@ def _min_sdk(value: object) -> bool:
 
 
 def _size(value: object) -> bool:
-    return _is_int(value) and value > 0
+    return _is_int(value) and 0 < value <= MAX_APK_BYTES
 
 
 def _hex64(value: object) -> bool:
@@ -245,11 +255,16 @@ def same_android_release(android: dict | None, release: dict) -> bool:
     ) == (release["versionCode"], release["versionName"], release["sha256"])
 
 
+def key_change(android: dict | None, release: dict) -> bool:
+    """[release] está firmada con otro certificado que la versión que publica el bloque «android» del feed."""
+    return android is not None and release["certSha256"] != android["certSha256"]
+
+
 def classify(feed: dict, release: dict) -> str:
     """
     NEW si [release] se puede publicar encima de [feed]; REPEATED si es justo lo que ya está publicado (una ejecución
     repetida, que no cambia nada). Cualquier otra cosa (versionCode que no sube, el mismo con otro APK, un versionName
-    que ya salió para Android) es un error.
+    que ya salió para Android, otro certificado de firma sin «allowKeyChange»: true) es un error.
     """
     android = feed.get("android")
     if same_android_release(android, release):
@@ -264,6 +279,15 @@ def classify(feed: dict, release: dict) -> str:
         published.add(android["versionName"])
     if release["versionName"] in published:
         raise FeedError(f"la versión {release['versionName']} ya se publicó para Android con otro versionCode")
+    # Android solo instala una actualización firmada con el mismo certificado: con otro, las apps instaladas se
+    # quedarían sin actualizar. Un cambio de clave tiene que ser a propósito (Release lanzado a mano).
+    if key_change(android, release) and release.get("allowKeyChange") is not True:
+        raise FeedError(
+            f"{release['versionName']} está firmada con otro certificado ({release['certSha256']}) que la versión "
+            f"publicada ({android['versionName']}, {android['certSha256']}) y Android no la instalaría encima: si el "
+            "cambio de clave es a propósito, release.json tiene que traer «allowKeyChange»: true (Release lanzado a "
+            "mano con allow_key_change)"
+        )
     return NEW
 
 
@@ -475,6 +499,8 @@ def main(argv: list[str] | None = None) -> int:
                 f"Entrega {mode}: {release['versionName']} (versionCode {release['versionCode']}), "
                 f"{format_size(release['size'])}, SHA-256 {release['sha256']}; en el feed: "
                 + (f"{published['versionName']} (versionCode {published['versionCode']})." if published else "nada.")
+                + (" Cambia la clave de firma («allowKeyChange»)." if mode == NEW and key_change(published, release)
+                   else "")
             )
             write_outputs({
                 "mode": mode,
@@ -616,6 +642,8 @@ class FeedTest(unittest.TestCase):
     def test_release_json_mal_formado(self):
         good = sample_release(16, "0.16.0")
         check_release(good)
+        check_release({**good, "size": MAX_APK_BYTES})
+        check_release({**good, "allowKeyChange": True})
         for change, fragment in (
             ({"versionCode": "16"}, "versionCode"),
             ({"versionCode": True}, "versionCode"),
@@ -631,7 +659,12 @@ class FeedTest(unittest.TestCase):
             ({"platforms": ["android", "android"]}, "platforms"),
             ({"platforms": ["windows"]}, "platforms"),
             ({"size": 0}, "size"),
+            # Un tamaño absurdo (2^62 desborda las cuentas de espacio de la app) no se publica nunca.
+            ({"size": MAX_APK_BYTES + 1}, "size"),
+            ({"size": 2 ** 62}, "size"),
             ({"sourceCommit": "main"}, "sourceCommit"),
+            ({"allowKeyChange": "true"}, "allowKeyChange"),
+            ({"allowKeyChange": 1}, "allowKeyChange"),
         ):
             self.assert_feed_error(fragment, check_release, {**good, **change})
         incomplete = dict(good)
@@ -650,8 +683,29 @@ class FeedTest(unittest.TestCase):
             ({"ios": "1.0"}, "ios"),
             ({"ios": {"url": "http://inseguro"}}, "ios.url"),
             ({"updated": 5}, "updated"),
+            ({"android": {**android_block(sample_release(16, "0.16.0"), "https://x/a.apk"), "size": 2 ** 62}}, "size"),
         ):
             self.assert_feed_error(fragment, check_feed, {**EMPTY, **change})
+
+    def test_otra_clave_de_firma_solo_con_allowkeychange(self):
+        feed, _ = update(EMPTY, sample_release(16, "0.16.0"), asset_url(REPO, "0.16.0"), "2026-10-28T21:30:00Z")
+        other = {**sample_release(17, "0.17.0"), "certSha256": "d" * 64}
+        self.assert_feed_error("está firmada con otro certificado", classify, feed, other)
+        self.assert_feed_error("otro certificado", classify, feed, {**other, "allowKeyChange": False})
+        self.assert_feed_error("otro certificado", update, feed, other, asset_url(REPO, "0.17.0"), "n")
+        allowed = {**other, "allowKeyChange": True}
+        self.assertEqual(NEW, classify(feed, allowed))
+        new, changed = update(feed, allowed, asset_url(REPO, "0.17.0"), "2026-11-02T08:00:00Z")
+        self.assertTrue(changed)
+        self.assertEqual("d" * 64, new["android"]["certSha256"])
+        self.assertNotIn("allowKeyChange", new["android"], "el permiso es de la entrega: no va al feed")
+        # Repetir esa entrega sigue siendo una re-ejecución, y la siguiente ya se compara con la clave nueva.
+        self.assertEqual(REPEATED, classify(new, other))
+        self.assertEqual(NEW, classify(new, {**sample_release(18, "0.18.0"), "certSha256": "d" * 64}))
+        self.assert_feed_error("otro certificado", classify, new, sample_release(18, "0.18.0"))
+        # La primera versión no tiene con qué compararse, y con la misma clave «allowKeyChange» no cambia nada.
+        self.assertEqual(NEW, classify(EMPTY, other))
+        self.assertEqual(NEW, classify(feed, {**sample_release(17, "0.17.0"), "allowKeyChange": True}))
 
     def test_apk_y_carpeta_de_la_entrega(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -753,6 +807,22 @@ class FeedTest(unittest.TestCase):
                 self.assertEqual(1, main(["validate", "--incoming", str(old), "--feed", str(root / "updates.json"),
                                           "--repo", REPO]))
             self.assertIn("no es mayor que el publicado (17, 0.17.0)", errors.getvalue())
+            # Y una firmada con otra clave, solo si su release.json lo permite.
+            incoming = root / "entrega-18" / "incoming"
+            incoming.mkdir(parents=True)
+            data = b"APK 0.18.0" * 100
+            release = {**sample_release(18, "0.18.0", data), "certSha256": "d" * 64}
+            (incoming / asset_name("0.18.0")).write_bytes(data)
+            (incoming / "release.json").write_text(json.dumps(release), encoding="utf-8")
+            validate = ["validate", "--incoming", str(incoming), "--feed", str(root / "updates.json"), "--repo", REPO]
+            with _environment(**plain), contextlib.redirect_stderr(io.StringIO()) as errors, \
+                    contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(1, main(validate))
+            self.assertIn("0.18.0 está firmada con otro certificado", errors.getvalue())
+            (incoming / "release.json").write_text(json.dumps({**release, "allowKeyChange": True}), encoding="utf-8")
+            with _environment(**plain), contextlib.redirect_stdout(io.StringIO()) as output:
+                self.assertEqual(0, main(validate))
+            self.assertIn("Cambia la clave de firma", output.getvalue())
 
     @unittest.skipUnless(TEMPLATE_FEED.is_file(), "no hay updates.json junto a scripts/")
     def test_el_updates_json_del_repositorio_es_valido(self):

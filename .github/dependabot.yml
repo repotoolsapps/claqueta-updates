@@ -1,0 +1,16 @@
+# Dependabot propone las versiones nuevas de las acciones de publish.yml: cada semana, una pull request con todas
+# juntas. Van fijadas al SHA completo de un commit (con la versión en un comentario) y Dependabot cambia las dos cosas.
+# El repositorio privado recibe la misma propuesta para su plantilla (updates-repo/): acepta las dos, para que no se
+# separen.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # Una versión recién salida no se propone hasta pasada una semana: si alguien la ha manipulado, suele saberse antes.
+    cooldown:
+      default-days: 7
+    groups:
+      acciones:
+        patterns: ['*']

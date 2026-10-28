@@ -32,15 +32,17 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
       PYTHONDONTWRITEBYTECODE: '1'
+    # Las acciones van fijadas al SHA completo de un commit, con su versión en el comentario: una etiqueta se puede
+    # mover a otro código, y este job escribe en main y en las releases. Dependabot las mantiene al día.
     steps:
       - name: Descargar la entrega
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           path: entrega
           persist-credentials: false
 
       - name: Descargar main
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           ref: main
           path: sitio
