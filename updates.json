@@ -1,19 +1,32 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-29T07:00:48Z",
+  "updated": "2026-10-29T17:16:43Z",
   "android": {
-    "versionCode": 19,
-    "versionName": "0.16.3",
+    "versionCode": 20,
+    "versionName": "0.16.4",
     "date": "2026-10-29",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.3/claqueta-0.16.3.apk",
-    "size": 40786940,
-    "sha256": "2db2ec4da971c05779f80dc3188a88e78327873aadf0373588521b01c085f737",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.4/claqueta-0.16.4.apk",
+    "size": 37428704,
+    "sha256": "0806d1800d78f01a1d6df70bfb792696c48f0f47a5a23e9f41dff8e52cdf9d24",
     "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "0.16.4",
+      "date": "2026-10-29",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Torrents: los enlaces magnet y los archivos .torrent se ven en el reproductor mientras se descargan, desde tus listas, el navegador, otras apps o «Añadir lista» (desde Android 9). Mientras carga, se ve con cuántas fuentes y a qué velocidad.",
+        "Lo descargado de un torrent se borra solo, y al dejar de verlo deja de compartirse. Con datos móviles, la app pregunta antes de empezar. Como en cualquier programa de torrents, quienes comparten el mismo ven tu dirección IP.",
+        "En Android 17, para abrir canales, listas o páginas de tu red de casa (un NAS, un servidor o un descodificador), Claqueta necesita el permiso «Dispositivos cercanos»: lo pide al abrirlos y, si falta, lo dice enseguida con «Permitir», en vez de quedarse cargando.",
+        "Mientras un canal carga, el botón central enseña pausa y la pone, y cerrar el reproductor mientras un vídeo aún carga lo para del todo, sin que suene después."
+      ]
+    },
     {
       "version": "0.16.3",
       "date": "2026-10-29",

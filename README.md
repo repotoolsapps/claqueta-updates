@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.3**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
+**Última versión para Android: 0.16.4**, del 29 de octubre de 2026 · Android 7.0 o superior · 37,4 MB
 
-[Descargar claqueta-0.16.3.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.3/claqueta-0.16.3.apk) · SHA-256 `2db2ec4da971c05779f80dc3188a88e78327873aadf0373588521b01c085f737`
+[Descargar claqueta-0.16.4.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.4/claqueta-0.16.4.apk) · SHA-256 `0806d1800d78f01a1d6df70bfb792696c48f0f47a5a23e9f41dff8e52cdf9d24`
+
+### 0.16.4 · 29 de octubre de 2026
+- Torrents: los enlaces magnet y los archivos .torrent se ven en el reproductor mientras se descargan, desde tus listas, el navegador, otras apps o «Añadir lista» (desde Android 9). Mientras carga, se ve con cuántas fuentes y a qué velocidad.
+- Lo descargado de un torrent se borra solo, y al dejar de verlo deja de compartirse. Con datos móviles, la app pregunta antes de empezar. Como en cualquier programa de torrents, quienes comparten el mismo ven tu dirección IP.
+- En Android 17, para abrir canales, listas o páginas de tu red de casa (un NAS, un servidor o un descodificador), Claqueta necesita el permiso «Dispositivos cercanos»: lo pide al abrirlos y, si falta, lo dice enseguida con «Permitir», en vez de quedarse cargando.
+- Mientras un canal carga, el botón central enseña pausa y la pone, y cerrar el reproductor mientras un vídeo aún carga lo para del todo, sin que suene después.
 
 ### 0.16.3 · 29 de octubre de 2026
 - Cerrar la ventana flotante cierra el reproductor: el vídeo deja de sonar (en algunos móviles seguía de fondo) y lo que se buscaba termina.
