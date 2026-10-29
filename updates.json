@@ -1,19 +1,32 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-29T17:16:43Z",
+  "updated": "2026-10-29T18:28:30Z",
   "android": {
-    "versionCode": 20,
-    "versionName": "0.16.4",
+    "versionCode": 21,
+    "versionName": "0.16.5",
     "date": "2026-10-29",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.4/claqueta-0.16.4.apk",
-    "size": 37428704,
-    "sha256": "0806d1800d78f01a1d6df70bfb792696c48f0f47a5a23e9f41dff8e52cdf9d24",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.5/claqueta-0.16.5.apk",
+    "size": 22461448,
+    "sha256": "76dfd7dcc3d5bf3c914e58e4aa2a99356b5e4716a0b7842315ebac19fc803b65",
     "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "0.16.5",
+      "date": "2026-10-29",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "La app pesa unos 15 MB menos.",
+        "Por ahora, el motor FFmpeg usa los decodificadores del sistema por software: FFmpeg vuelve en la próxima versión.",
+        "Los canales RTMP (rtmp://) ya no se reproducen: al abrirlos, la app lo dice.",
+        "Ya no hay versión para aparatos con procesador x86 de 32 bits."
+      ]
+    },
     {
       "version": "0.16.4",
       "date": "2026-10-29",

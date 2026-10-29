@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.4**, del 29 de octubre de 2026 · Android 7.0 o superior · 37,4 MB
+**Última versión para Android: 0.16.5**, del 29 de octubre de 2026 · Android 7.0 o superior · 22,5 MB
 
-[Descargar claqueta-0.16.4.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.4/claqueta-0.16.4.apk) · SHA-256 `0806d1800d78f01a1d6df70bfb792696c48f0f47a5a23e9f41dff8e52cdf9d24`
+[Descargar claqueta-0.16.5.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.5/claqueta-0.16.5.apk) · SHA-256 `76dfd7dcc3d5bf3c914e58e4aa2a99356b5e4716a0b7842315ebac19fc803b65`
+
+### 0.16.5 · 29 de octubre de 2026
+- La app pesa unos 15 MB menos.
+- Por ahora, el motor FFmpeg usa los decodificadores del sistema por software: FFmpeg vuelve en la próxima versión.
+- Los canales RTMP (rtmp://) ya no se reproducen: al abrirlos, la app lo dice.
+- Ya no hay versión para aparatos con procesador x86 de 32 bits.
 
 ### 0.16.4 · 29 de octubre de 2026
 - Torrents: los enlaces magnet y los archivos .torrent se ven en el reproductor mientras se descargan, desde tus listas, el navegador, otras apps o «Añadir lista» (desde Android 9). Mientras carga, se ve con cuántas fuentes y a qué velocidad.
