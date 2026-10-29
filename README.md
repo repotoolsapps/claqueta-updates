@@ -23,9 +23,17 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.0**, del 28 de octubre de 2026 · Android 7.0 o superior · 40,7 MB
+**Última versión para Android: 0.16.1**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
 
-[Descargar claqueta-0.16.0.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.0/claqueta-0.16.0.apk) · SHA-256 `0e2864ebc960060c2b766c9ad4071cc34a5c598aed5dce5883c7d803d416610e`
+[Descargar claqueta-0.16.1.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.1/claqueta-0.16.1.apk) · SHA-256 `fb50c97addc6908453a90b8dade30548b9855d309aaab9b361e368426bb4f9ff`
+
+### 0.16.1 · 29 de octubre de 2026
+- En vertical, el vídeo se ve centrado; al abrir la guía sube arriba y la guía aparece debajo, como en horizontal.
+- Desde «Continuar viendo», el reproductor enseña esa lista para cambiar de canal.
+- Con datos móviles, lo que suena se para y pregunta también con la pantalla apagada o en la ventana flotante, y los canales de internet de la cola no se cargan antes de aceptar.
+- El candado del reproductor mantiene la orientación aunque se bloquee el móvil.
+- Actualizaciones: avisos claros si el Bloqueador automático de Samsung, Play Protect o una protección del sistema no dejan instalar, y nunca se instalan con un vídeo en marcha.
+- Avisos más cortos cuando un canal web no se puede abrir.
 
 ### 0.16.0 · 28 de octubre de 2026
 - La app se actualiza sola: avisa cuando hay una versión nueva, enseña sus novedades y la instala con un toque.
