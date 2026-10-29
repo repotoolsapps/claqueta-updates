@@ -1,19 +1,34 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-29T03:28:05Z",
+  "updated": "2026-10-29T07:00:48Z",
   "android": {
-    "versionCode": 18,
-    "versionName": "0.16.2",
+    "versionCode": 19,
+    "versionName": "0.16.3",
     "date": "2026-10-29",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.2/claqueta-0.16.2.apk",
-    "size": 40786624,
-    "sha256": "e4373da504a7c71d883e5e939145db31698345b250b5acf981f098da88a9a894",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.3/claqueta-0.16.3.apk",
+    "size": 40786940,
+    "sha256": "2db2ec4da971c05779f80dc3188a88e78327873aadf0373588521b01c085f737",
     "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "0.16.3",
+      "date": "2026-10-29",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Cerrar la ventana flotante cierra el reproductor: el vídeo deja de sonar (en algunos móviles seguía de fondo) y lo que se buscaba termina.",
+        "Mientras se busca el vídeo de una estación web, el reproductor está en pausa de verdad: no mantiene el móvil despierto ni la notificación dice que suena, y apagar la pantalla un momento ya no hace empezar de cero.",
+        "Dos estaciones con la misma web, una tras otra, buscan cada una su vídeo; antes la segunda se quedaba girando.",
+        "Con datos móviles, pasar a otro canal o darle a reproducir desde la notificación, unos auriculares o la ventana flotante ya no cuenta como aceptar, y la pregunta es siempre por lo que suena.",
+        "La página de un canal que pasa al navegador solo se abre cuando se ve el reproductor; si se cierra antes, ya no se abre sola después.",
+        "Reintentar vuelve a buscar en su web el vídeo que caducó, y al volver a la app durante una búsqueda ya no aparece un error antiguo."
+      ]
+    },
     {
       "version": "0.16.2",
       "date": "2026-10-29",

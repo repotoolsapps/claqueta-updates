@@ -23,9 +23,17 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.2**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
+**Última versión para Android: 0.16.3**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
 
-[Descargar claqueta-0.16.2.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.2/claqueta-0.16.2.apk) · SHA-256 `e4373da504a7c71d883e5e939145db31698345b250b5acf981f098da88a9a894`
+[Descargar claqueta-0.16.3.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.3/claqueta-0.16.3.apk) · SHA-256 `2db2ec4da971c05779f80dc3188a88e78327873aadf0373588521b01c085f737`
+
+### 0.16.3 · 29 de octubre de 2026
+- Cerrar la ventana flotante cierra el reproductor: el vídeo deja de sonar (en algunos móviles seguía de fondo) y lo que se buscaba termina.
+- Mientras se busca el vídeo de una estación web, el reproductor está en pausa de verdad: no mantiene el móvil despierto ni la notificación dice que suena, y apagar la pantalla un momento ya no hace empezar de cero.
+- Dos estaciones con la misma web, una tras otra, buscan cada una su vídeo; antes la segunda se quedaba girando.
+- Con datos móviles, pasar a otro canal o darle a reproducir desde la notificación, unos auriculares o la ventana flotante ya no cuenta como aceptar, y la pregunta es siempre por lo que suena.
+- La página de un canal que pasa al navegador solo se abre cuando se ve el reproductor; si se cierra antes, ya no se abre sola después.
+- Reintentar vuelve a buscar en su web el vídeo que caducó, y al volver a la app durante una búsqueda ya no aparece un error antiguo.
 
 ### 0.16.2 · 29 de octubre de 2026
 - Las estaciones web abren el reproductor al momento: mientras se busca su vídeo gira su círculo de carga, sin la pantalla negra de antes, y el vídeo empieza ahí mismo.
