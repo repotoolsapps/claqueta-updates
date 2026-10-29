@@ -23,9 +23,16 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.1**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
+**Última versión para Android: 0.16.2**, del 29 de octubre de 2026 · Android 7.0 o superior · 40,8 MB
 
-[Descargar claqueta-0.16.1.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.1/claqueta-0.16.1.apk) · SHA-256 `fb50c97addc6908453a90b8dade30548b9855d309aaab9b361e368426bb4f9ff`
+[Descargar claqueta-0.16.2.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.2/claqueta-0.16.2.apk) · SHA-256 `e4373da504a7c71d883e5e939145db31698345b250b5acf981f098da88a9a894`
+
+### 0.16.2 · 29 de octubre de 2026
+- Las estaciones web abren el reproductor al momento: mientras se busca su vídeo gira su círculo de carga, sin la pantalla negra de antes, y el vídeo empieza ahí mismo.
+- Al cambiar a otra estación web con anterior, siguiente o la guía, solo gira el círculo del reproductor.
+- Si un canal web no se puede abrir, el reproductor dice por qué y ofrece Reintentar, Otra opción o Siguiente.
+- Si una web tarda más de lo normal, se puede ver su página; si pide elegir en su aviso de cookies, pasa al navegador y el vídeo se abre solo después.
+- En la ventana flotante, la búsqueda sigue y el vídeo empieza en ella.
 
 ### 0.16.1 · 29 de octubre de 2026
 - En vertical, el vídeo se ve centrado; al abrir la guía sube arriba y la guía aparece debajo, como en horizontal.

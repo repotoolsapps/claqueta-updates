@@ -1,19 +1,33 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-29T00:47:29Z",
+  "updated": "2026-10-29T03:28:05Z",
   "android": {
-    "versionCode": 17,
-    "versionName": "0.16.1",
+    "versionCode": 18,
+    "versionName": "0.16.2",
     "date": "2026-10-29",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.1/claqueta-0.16.1.apk",
-    "size": 40769568,
-    "sha256": "fb50c97addc6908453a90b8dade30548b9855d309aaab9b361e368426bb4f9ff",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.2/claqueta-0.16.2.apk",
+    "size": 40786624,
+    "sha256": "e4373da504a7c71d883e5e939145db31698345b250b5acf981f098da88a9a894",
     "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "0.16.2",
+      "date": "2026-10-29",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Las estaciones web abren el reproductor al momento: mientras se busca su vídeo gira su círculo de carga, sin la pantalla negra de antes, y el vídeo empieza ahí mismo.",
+        "Al cambiar a otra estación web con anterior, siguiente o la guía, solo gira el círculo del reproductor.",
+        "Si un canal web no se puede abrir, el reproductor dice por qué y ofrece Reintentar, Otra opción o Siguiente.",
+        "Si una web tarda más de lo normal, se puede ver su página; si pide elegir en su aviso de cookies, pasa al navegador y el vídeo se abre solo después.",
+        "En la ventana flotante, la búsqueda sigue y el vídeo empieza en ella."
+      ]
+    },
     {
       "version": "0.16.1",
       "date": "2026-10-29",
