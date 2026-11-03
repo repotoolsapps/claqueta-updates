@@ -1,19 +1,36 @@
 {
   "schema": 1,
   "app": "com.repotools.claqueta",
-  "updated": "2026-10-29T18:28:30Z",
+  "updated": "2026-11-03T13:01:16Z",
   "android": {
-    "versionCode": 21,
-    "versionName": "0.16.5",
-    "date": "2026-10-29",
+    "versionCode": 22,
+    "versionName": "0.17.0-prueba15",
+    "date": "2026-11-03",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.5/claqueta-0.16.5.apk",
-    "size": 22461448,
-    "sha256": "76dfd7dcc3d5bf3c914e58e4aa2a99356b5e4716a0b7842315ebac19fc803b65",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.17.0-prueba15/claqueta-0.17.0-prueba15.apk",
+    "size": 29996968,
+    "sha256": "f48440653a5804ef0201b1c108bd931c09ad773017f8f37107f582c485de915d",
     "certSha256": "7774285147e1ae09680a55638092ce3ff99a7ef64875e8dbdcbc96ed79b996c9"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "0.17.0-prueba15",
+      "date": "2026-11-03",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Versión de prueba.",
+        "Enviar a la tele (Chromecast, Google TV y teles con Chromecast): lo que suena se ve en la tele y el reproductor la maneja. Lo que la tele no abre tal cual (MKV, AVI, FLV, vídeo Xvid, DivX, MPEG-2 o VC-1, audio AC-3, E-AC-3, MP2, DTS o TrueHD) se convierte en el móvil, también el audio de los canales en directo. En «Ajustes», «Convertir vídeo para la tele»: Preguntar, Siempre o Nunca.",
+        "Mientras se envía, la tarjeta de «Continuar viendo» de Inicio maneja la tele: progreso, pausa, ±10 s y «Dejar de enviar».",
+        "Listas Xtream Codes: añade tu cuenta con el servidor, el usuario y la contraseña, con sus canales, películas, series y guía.",
+        "«Novedades» en Inicio: lo último que han añadido tus listas.",
+        "FFmpeg vuelve para el audio que el móvil no sabe abrir (DTS, TrueHD, MP2, AC-3 donde falte).",
+        "Los AVI de «Media» se ven con imagen y sonido.",
+        "Navegador: ya no te lleva a la publicidad, los favoritos de vídeos de una web vuelven a buscar el vídeo al abrirlos (no caducan), carga reproductores que rechazaban a las apps y muestra los PDF."
+      ]
+    },
     {
       "version": "0.16.5",
       "date": "2026-10-29",

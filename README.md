@@ -23,9 +23,19 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.16.5**, del 29 de octubre de 2026 · Android 7.0 o superior · 22,5 MB
+**Última versión para Android: 0.17.0-prueba15**, del 3 de noviembre de 2026 · Android 7.0 o superior · 30,0 MB
 
-[Descargar claqueta-0.16.5.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.5/claqueta-0.16.5.apk) · SHA-256 `76dfd7dcc3d5bf3c914e58e4aa2a99356b5e4716a0b7842315ebac19fc803b65`
+[Descargar claqueta-0.17.0-prueba15.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.17.0-prueba15/claqueta-0.17.0-prueba15.apk) · SHA-256 `f48440653a5804ef0201b1c108bd931c09ad773017f8f37107f582c485de915d`
+
+### 0.17.0-prueba15 · 3 de noviembre de 2026
+- Versión de prueba.
+- Enviar a la tele (Chromecast, Google TV y teles con Chromecast): lo que suena se ve en la tele y el reproductor la maneja. Lo que la tele no abre tal cual (MKV, AVI, FLV, vídeo Xvid, DivX, MPEG-2 o VC-1, audio AC-3, E-AC-3, MP2, DTS o TrueHD) se convierte en el móvil, también el audio de los canales en directo. En «Ajustes», «Convertir vídeo para la tele»: Preguntar, Siempre o Nunca.
+- Mientras se envía, la tarjeta de «Continuar viendo» de Inicio maneja la tele: progreso, pausa, ±10 s y «Dejar de enviar».
+- Listas Xtream Codes: añade tu cuenta con el servidor, el usuario y la contraseña, con sus canales, películas, series y guía.
+- «Novedades» en Inicio: lo último que han añadido tus listas.
+- FFmpeg vuelve para el audio que el móvil no sabe abrir (DTS, TrueHD, MP2, AC-3 donde falte).
+- Los AVI de «Media» se ven con imagen y sonido.
+- Navegador: ya no te lleva a la publicidad, los favoritos de vídeos de una web vuelven a buscar el vídeo al abrirlos (no caducan), carga reproductores que rechazaban a las apps y muestra los PDF.
 
 ### 0.16.5 · 29 de octubre de 2026
 - La app pesa unos 15 MB menos.
