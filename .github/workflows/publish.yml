@@ -1,4 +1,4 @@
-# Publica la entrega que deja el workflow Release del repositorio privado de Claqueta en la rama incoming: comprueba
+# Publica la entrega que deja el workflow Release del repositorio privado de Whatplay en la rama incoming: comprueba
 # el APK, crea la release vX.Y.Z con el APK, actualiza updates.json y el README en main y borra incoming, para que
 # el APK no se quede en el historial de git. Volver a ejecutarlo es seguro: lo que ya está hecho no cambia.
 name: Publicar versión
@@ -67,7 +67,7 @@ jobs:
           SHA256: ${{ steps.entrega.outputs.sha256 }}
         run: |
           apk="entrega/incoming/$ASSET_NAME"
-          title="Claqueta $VERSION_NAME"
+          title="Whatplay $VERSION_NAME"
           # ¿Existe ya, publicada o en borrador? Una ejecución anterior puede haberla dejado a medias. (Sin «| head»:
           # cortarle la salida a gh con pipefail haría fallar el paso.)
           release_ids="$(gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" --paginate \
@@ -119,7 +119,7 @@ jobs:
           fi
           git add updates.json README.md
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-            commit -q -m "Claqueta $VERSION_NAME para Android"
+            commit -q -m "Whatplay $VERSION_NAME para Android"
           git push -q origin HEAD:main
           echo "main actualizado: $(git rev-parse HEAD)."
 
@@ -149,7 +149,7 @@ jobs:
           SHA256: ${{ steps.entrega.outputs.sha256 }}
         run: |
           {
-            echo "### Claqueta $TAG publicada (entrega $MODE)"
+            echo "### Whatplay $TAG publicada (entrega $MODE)"
             echo ""
             echo "- Release: https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG"
             echo "- APK: $ASSET_URL"

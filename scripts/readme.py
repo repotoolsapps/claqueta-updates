@@ -102,7 +102,7 @@ def main(argv: list[str] | None = None) -> int:
 # ---------------------------------------------------------------------------------------------------------------------
 
 TEMPLATE_README = Path(__file__).resolve().parent.parent / "README.md"
-README = f"""# Claqueta
+README = f"""# Whatplay
 
 Texto de antes.
 
@@ -136,8 +136,8 @@ class ReadmeTest(unittest.TestCase):
     def test_una_y_dos_versiones(self):
         block = render(published((16, "0.16.0", "2026-10-28")))
         self.assertIn("**Última versión para Android: 0.16.0**, del 28 de octubre de 2026 · Android 7.0 o superior", block)
-        self.assertIn("[Descargar claqueta-0.16.0.apk](https://github.com/repotoolsapps/claqueta-updates/releases/"
-                      "download/v0.16.0/claqueta-0.16.0.apk) · SHA-256 `", block)
+        self.assertIn("[Descargar whatplay-0.16.0.apk](https://github.com/repotoolsapps/claqueta-updates/releases/"
+                      "download/v0.16.0/whatplay-0.16.0.apk) · SHA-256 `", block)
         self.assertIn("### 0.16.0 · 28 de octubre de 2026\n- Novedad de la 0.16.0.\n", block)
         self.assertNotIn(EMPTY_TEXT, block)
         block = render(published((16, "0.16.0", "2026-10-28"), (17, "0.17.0", "2026-11-02")))
@@ -158,7 +158,7 @@ class ReadmeTest(unittest.TestCase):
     def test_reemplaza_solo_el_bloque_e_idempotente(self):
         block = render(published((16, "0.16.0", "2026-10-28")))
         once = replace_block(README, block)
-        self.assertTrue(once.startswith("# Claqueta\n\nTexto de antes.\n\n## Novedades\n\n" + START + "\n" + NOTICE))
+        self.assertTrue(once.startswith("# Whatplay\n\nTexto de antes.\n\n## Novedades\n\n" + START + "\n" + NOTICE))
         self.assertTrue(once.endswith(END + "\n\n## Después\n\nTexto de después.\n"))
         self.assertNotIn("Lo que hubiera.", once)
         self.assertEqual(once, replace_block(once, block))

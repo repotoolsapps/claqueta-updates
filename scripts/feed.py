@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-El feed de actualizaciones de Claqueta (updates.json) y las entregas que llegan por la rama «incoming».
+El feed de actualizaciones de Whatplay (updates.json) y las entregas que llegan por la rama «incoming».
 
     validate  Comprueba la entrega: release.json bien formado, el APK con su tamaño y su SHA-256, un versionCode
               mayor que el del feed (o la misma entrega ya publicada, si se repite la ejecución) y el mismo certificado
@@ -15,7 +15,7 @@ El feed de actualizaciones de Claqueta (updates.json) y las entregas que llegan 
 
 El feed (esquema 1) es lo que lee la app:
 
-    {"schema": 1, "app": "com.repotools.claqueta", "updated": "2026-10-28T21:30:00Z",
+    {"schema": 1, "app": "com.repotools.whatplay", "updated": "2026-10-28T21:30:00Z",
      "android": {"versionCode", "versionName", "date", "minSdk", "url", "size", "sha256", "certSha256"} o null,
      "ios": null (reservado para cuando haya versión de iOS),
      "releases": [{"version", "date", "platforms", "notes"}, ...]}   de la más nueva a la más antigua
@@ -39,7 +39,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-APP_ID = "com.repotools.claqueta"
+APP_ID = "com.repotools.whatplay"
 SCHEMA = 1
 FEED_KEYS = ("schema", "app", "updated", "android", "ios", "releases")
 VERSION_RE = re.compile(r"[0-9]+(?:\.[0-9]+)*(?:-[0-9A-Za-z]+(?:\.[0-9A-Za-z]+)*)?")
@@ -211,7 +211,7 @@ def tag_for(version_name: str) -> str:
 
 
 def asset_name(version_name: str) -> str:
-    return f"claqueta-{version_name}.apk"
+    return f"whatplay-{version_name}.apk"
 
 
 def asset_url(repo: str, version_name: str) -> str:
@@ -222,7 +222,7 @@ def asset_url(repo: str, version_name: str) -> str:
 
 
 def incoming_apk(folder: Path, release: dict) -> Path:
-    """El APK de la entrega. La carpeta trae justo release.json y claqueta-<versionName>.apk, archivos normales."""
+    """El APK de la entrega. La carpeta trae justo release.json y whatplay-<versionName>.apk, archivos normales."""
     expected = {"release.json", asset_name(release["versionName"])}
     if not folder.is_dir():
         raise FeedError(f"no existe la carpeta {folder}")
@@ -420,7 +420,7 @@ def release_notes(release: dict, repo: str) -> str:
         f"**{android_name(release['minSdk'])} o superior** · `{name}` · {format_size(release['size'])}",
         "",
         f"¿Primera vez? Descarga `{name}` aquí abajo, en Assets, y sigue "
-        f"[estos pasos](https://github.com/{repo}#instalar-claqueta-por-primera-vez). Después, Claqueta se "
+        f"[estos pasos](https://github.com/{repo}#instalar-whatplay-por-primera-vez). Después, Whatplay se "
         "actualiza sola.",
         "",
         f"SHA-256 del APK: `{release['sha256']}`",
@@ -459,7 +459,7 @@ def report_error(message: str) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="El feed de actualizaciones de Claqueta y sus entregas.")
+    parser = argparse.ArgumentParser(description="El feed de actualizaciones de Whatplay y sus entregas.")
     parser.add_argument("--self-test", action="store_true", help="ejecuta las pruebas del script")
     commands = parser.add_subparsers(dest="command")
 
@@ -567,7 +567,7 @@ class FeedTest(unittest.TestCase):
         self.assertTrue(changed)
         self.assertEqual("2026-10-28T21:30:00Z", feed["updated"])
         self.assertEqual(
-            "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.0/claqueta-0.16.0.apk",
+            "https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.16.0/whatplay-0.16.0.apk",
             feed["android"]["url"],
         )
         self.assertEqual(["versionCode", "versionName", "date", "minSdk", "url", "size", "sha256", "certSha256"],
@@ -714,7 +714,7 @@ class FeedTest(unittest.TestCase):
             data = os.urandom(3000)
             release = sample_release(16, "0.16.0", data)
             (incoming / "release.json").write_text(json.dumps(release), encoding="utf-8")
-            (incoming / "claqueta-0.16.0.apk").write_bytes(data)
+            (incoming / "whatplay-0.16.0.apk").write_bytes(data)
             apk = incoming_apk(incoming, release)
             check_apk(release, apk)
             self.assert_feed_error("mide", check_apk, {**release, "size": 2999}, apk)
@@ -722,20 +722,20 @@ class FeedTest(unittest.TestCase):
             (incoming / "otro.txt").write_text("sobra")
             self.assert_feed_error("tiene que traer justo", incoming_apk, incoming, release)
             (incoming / "otro.txt").unlink()
-            (incoming / "claqueta-0.16.0.apk").rename(incoming / "claqueta.apk")
+            (incoming / "whatplay-0.16.0.apk").rename(incoming / "whatplay.apk")
             self.assert_feed_error("tiene que traer justo", incoming_apk, incoming, release)
-            (incoming / "claqueta.apk").unlink()
-            (incoming / "claqueta-0.16.0.apk").symlink_to(Path(folder, "fuera.apk"))
+            (incoming / "whatplay.apk").unlink()
+            (incoming / "whatplay-0.16.0.apk").symlink_to(Path(folder, "fuera.apk"))
             self.assert_feed_error("archivo normal", incoming_apk, incoming, release)
             self.assert_feed_error("no existe la carpeta", incoming_apk, Path(folder, "nada"), release)
 
     def test_url_del_asset_y_repositorio(self):
-        self.assertEqual("https://github.com/a/b/releases/download/v1.0/claqueta-1.0.apk", asset_url("a/b", "1.0"))
+        self.assertEqual("https://github.com/a/b/releases/download/v1.0/whatplay-1.0.apk", asset_url("a/b", "1.0"))
         for repo in ("a", "a/b/c", "a/b c", "../x"):
             self.assert_feed_error("dueño/nombre", asset_url, repo, "1.0")
-        self.assertTrue(_url("http://127.0.0.1:8099/claqueta-0.16.0.apk"))
-        self.assertTrue(_url("http://localhost/claqueta.apk"))
-        for url in ("http://example.com/claqueta.apk", "http://127.0.0.1.example.com/x", "https://x/a b", "ftp://x/y"):
+        self.assertTrue(_url("http://127.0.0.1:8099/whatplay-0.16.0.apk"))
+        self.assertTrue(_url("http://localhost/whatplay.apk"))
+        for url in ("http://example.com/whatplay.apk", "http://127.0.0.1.example.com/x", "https://x/a b", "ftp://x/y"):
             self.assertFalse(_url(url), url)
 
     def test_update_con_url_local_para_pruebas(self):
@@ -747,11 +747,11 @@ class FeedTest(unittest.TestCase):
                          "--repo", REPO, "--url"]
             with _environment(GITHUB_ACTIONS="false"), contextlib.redirect_stdout(io.StringIO()), \
                     contextlib.redirect_stderr(io.StringIO()) as errors:
-                self.assertEqual(1, main(arguments + ["http://example.com/claqueta-0.16.0.apk"]))
-                self.assertEqual(0, main(arguments + ["http://127.0.0.1:8099/claqueta-0.16.0.apk"]))
+                self.assertEqual(1, main(arguments + ["http://example.com/whatplay-0.16.0.apk"]))
+                self.assertEqual(0, main(arguments + ["http://127.0.0.1:8099/whatplay-0.16.0.apk"]))
             self.assertIn("no es una URL https", errors.getvalue())
             feed = check_feed(load_json(root / "updates.json"))
-            self.assertEqual("http://127.0.0.1:8099/claqueta-0.16.0.apk", feed["android"]["url"])
+            self.assertEqual("http://127.0.0.1:8099/whatplay-0.16.0.apk", feed["android"]["url"])
 
     def test_notas_de_la_release_y_textos(self):
         release = sample_release(16, "0.16.0", b"x" * 40634791,
@@ -761,8 +761,8 @@ class FeedTest(unittest.TestCase):
         self.assertIn("- Usa \\*dos\\* filtros\\_nuevos\n", notes)
         self.assertIn("- 1\\. Primero\n", notes)
         self.assertIn("- \\- guion\n", notes)
-        self.assertIn("**Android 7.0 o superior** · `claqueta-0.16.0.apk` · 40,6 MB", notes)
-        self.assertIn("https://github.com/repotoolsapps/claqueta-updates#instalar-claqueta-por-primera-vez", notes)
+        self.assertIn("**Android 7.0 o superior** · `whatplay-0.16.0.apk` · 40,6 MB", notes)
+        self.assertIn("https://github.com/repotoolsapps/claqueta-updates#instalar-whatplay-por-primera-vez", notes)
         self.assertIn(f"SHA-256 del APK: `{release['sha256']}`", notes)
         self.assertEqual("28 de octubre de 2026", spanish_date("2026-10-28"))
         self.assertEqual("1 de enero de 2027", spanish_date("2027-01-01"))

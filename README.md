@@ -1,31 +1,55 @@
-# Claqueta · actualizaciones
+# Whatplay · actualizaciones
 
-Desde aquí se instala y se actualiza **Claqueta para Android**, un reproductor de listas de canales (M3U, W3U…) con guía de programación. El código de la app no está en este repositorio: solo lo que hace falta para instalarla y para que se actualice sola.
+Desde aquí se instala y se actualiza **Whatplay para Android**, un reproductor de listas de canales (M3U, W3U…) con guía de programación. El código de la app no está en este repositorio: solo lo que hace falta para instalarla y para que se actualice sola.
 
 - **[`updates.json`](updates.json)**: lo que consulta la app para saber si hay una versión nueva: cuál es, sus novedades, de dónde descargarla y cómo comprobar que la descarga es la buena (tamaño, SHA-256 del APK y del certificado de firma).
-- **[Releases](https://github.com/repotoolsapps/claqueta-updates/releases)**: cada versión, con su APK (`claqueta-<versión>.apk`) y sus novedades.
+- **[Releases](https://github.com/repotoolsapps/claqueta-updates/releases)**: cada versión, con su APK (`whatplay-<versión>.apk`) y sus novedades.
 
-## Instalar Claqueta por primera vez
+## Instalar Whatplay por primera vez
 
-Claqueta no está en Google Play: se instala desde aquí una sola vez, en un móvil o una tablet Android (la versión mínima de Android aparece junto a la última versión, en [Novedades](#novedades)).
+Whatplay no está en Google Play: se instala desde aquí una sola vez, en un móvil o una tablet Android (la versión mínima de Android aparece junto a la última versión, en [Novedades](#novedades)).
 
-1. En el dispositivo, abre la **[última versión](https://github.com/repotoolsapps/claqueta-updates/releases/latest)** y, en **Assets**, toca `claqueta-<versión>.apk` para descargarlo.
+1. En el dispositivo, abre la **[última versión](https://github.com/repotoolsapps/claqueta-updates/releases/latest)** y, en **Assets**, toca `whatplay-<versión>.apk` para descargarlo.
 2. Abre el archivo descargado, desde el aviso de descarga o desde la app de archivos (carpeta **Descargas**).
 3. Android avisa de que, por seguridad, no deja instalar apps de esa fuente: toca **Ajustes**, activa **Permitir de esta fuente** (es el permiso «Instalar apps desconocidas») y vuelve atrás. En Android 7, el ajuste está en **Ajustes › Seguridad › Orígenes desconocidos**.
 4. Toca **Instalar**. Si Play Protect avisa de que no conoce la app, elige instalarla igualmente.
 
-A partir de ahí no hace falta volver por aquí: Claqueta avisa cuando hay una versión nueva, enseña sus novedades y la instala con un toque. La primera vez, Android pide el mismo permiso, esta vez para Claqueta. Si quieres, quítaselo después al navegador o a la app de archivos en **Ajustes › Aplicaciones › Acceso especial › Instalar apps desconocidas** (el camino cambia un poco de un fabricante a otro).
+A partir de ahí no hace falta volver por aquí: Whatplay avisa cuando hay una versión nueva, enseña sus novedades y la instala con un toque. La primera vez, Android pide el mismo permiso, esta vez para Whatplay. Si quieres, quítaselo después al navegador o a la app de archivos en **Ajustes › Aplicaciones › Acceso especial › Instalar apps desconocidas** (el camino cambia un poco de un fabricante a otro).
 
-Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y en `updates.json`. En un ordenador: `shasum -a 256 claqueta-<versión>.apk` (macOS y Linux) o `certutil -hashfile claqueta-<versión>.apk SHA256` (Windows).
+Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y en `updates.json`. En un ordenador: `shasum -a 256 whatplay-<versión>.apk` (macOS y Linux) o `certutil -hashfile whatplay-<versión>.apk SHA256` (Windows).
 
 ## Novedades
 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 0.17.0-prueba15**, del 3 de noviembre de 2026 · Android 7.0 o superior · 30,0 MB
+**Última versión para Android: 2.0.0-prueba67**, del 4 de noviembre de 2026 · Android 7.0 o superior · 46,0 MB
 
-[Descargar claqueta-0.17.0-prueba15.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v0.17.0-prueba15/claqueta-0.17.0-prueba15.apk) · SHA-256 `f48440653a5804ef0201b1c108bd931c09ad773017f8f37107f582c485de915d`
+[Descargar whatplay-2.0.0-prueba67.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0-prueba67/whatplay-2.0.0-prueba67.apk) · SHA-256 `a4f85cba7ac6c04708bca1a227751b9c459df5a90ef9d5c5f90e082a5caf4cdb`
+
+### 2.0.0-prueba67 · 4 de noviembre de 2026
+- Whatplay, en español, inglés, francés y alemán: elige el idioma en Ajustes › Apariencia › Idioma, o deja el del móvil.
+- La primera vez que abres Whatplay: una bienvenida con lo que puedes hacer (se puede saltar), las preguntas de los anuncios y de «Novedades», una guía rápida de dónde está cada cosa (se puede omitir) y la opción de quitar los anuncios con Whatplay Premium. Sale una sola vez; en la tele, solo la bienvenida.
+- Whatplay se actualiza sola desde Google Play: la versión nueva se descarga mientras usas la app y «Reiniciar» la instala; si no lo pulsas, se instala al salir de la app o al volver a abrirla, nunca con un vídeo en marcha. Cuando una versión es imprescindible, te pide actualizar antes de seguir.
+- Después de ver unos canales, al salir del reproductor, Google Play puede pedirte que valores Whatplay.
+- El gesto de atrás hace lo mismo que el botón de atrás de cada pantalla, con la misma transición: en las listas, Favoritos, la guía, Ajustes, Sincronización y al añadir una lista, la página ya no encoge siguiendo al dedo. En las hojas de abajo, el gesto las cierra como tocar fuera.
+- La guía rápida de la primera vez te enseña la app de verdad: unos bocadillos señalan Listas, «Añadir lista», Favoritos, Buscar y Ajustes, y el último cuenta el reproductor. «Omitir» o el gesto de atrás la cierran cuando quieras.
+- Al enviar a la tele un canal en TS, la imagen ya no se queda parada cuando la emisión cambia por dentro (lo que pasa cuando el servidor del canal vuelve a arrancar): el móvil sigue dándole vídeo y, si el audio que convierte no llega a tiempo, sigue en silencio en vez de pararse.
+- La cuenta de un proveedor (servidor, usuario y contraseña) se llama ahora «Cuenta de proveedor», en Añadir lista y en el filtro de Listas.
+- Ajustes › Acerca de: la política de privacidad y los términos de uso.
+- Menú lateral (el botón de tres rayas, arriba a la izquierda): Whatplay Premium, Ajustes, Sincronización, Novedades, la ayuda y el contacto con el soporte, valorar y compartir Whatplay, nuestras redes y lo legal. Y Ajustes, con un aspecto nuevo más limpio.
+- Whatplay Premium, renovado: la tienda enseña lo que incluye y los dos planes, con lo que ahorras con el anual, y en el reproductor la pastilla «Quitar anuncios» (o el tiempo que te queda sin anuncios) abre una hoja para ver un vídeo y sumar 30 minutos, o hacerte Premium.
+- Inicio enseña solo tus 5 últimos recientes (lo que dejaste a medias sigue en «Continuar viendo»), y con «Ocultar barras al desplazar» la cabecera ya no se queda escondida: vuelve sola al llegar arriba o cuando la lista cabe entera (por ejemplo, al filtrar o buscar) y al cambiar de lista o de pestaña.
+- La nueva Whatplay: al actualizar, tus listas, tus favoritos y los marcadores del navegador de la versión anterior pasan solos (y si compraste quitar los anuncios, lo sigues teniendo).
+- Whatplay Premium (mensual o anual) quita los anuncios; si pagaste la Whatplay de antes sin anuncios, la sigues teniendo así para siempre.
+- Si sigues suscrito a Whatplay desde una versión anterior, tu suscripción también quita los anuncios mientras dure.
+- Anuncios: de vez en cuando al abrir una lista, abajo del todo en el reproductor y al cambiar de canal; ver un vídeo da 30 minutos sin anuncios, acumulables.
+- Ajustes › Actualizaciones › Novedades: notificaciones con las novedades de Whatplay, solo si las activas.
+- Al abrir la app, las listas se actualizan en cuanto hay conexión (antes fallaban todas como si no hubiera internet), y todas aunque una no se pueda descargar.
+- Con «Ocultar barras al desplazar», también se esconde la barra de arriba de las listas y de tus favoritos, y la página llega hasta abajo del todo, sin una franja negra.
+- Sincronización: tus listas, favoritos y ajustes en todos tus dispositivos, iniciando sesión con Google (en tu Google Drive) o con Apple (Ajustes › Sincronización).
+- En el reproductor, el sombreado de los controles llega hasta arriba del todo, también bajo la barra de estado.
+- «Abrir en la web» abre la página a pantalla completa, como un canal embed, sin la barra de la dirección.
 
 ### 0.17.0-prueba15 · 3 de noviembre de 2026
 - Versión de prueba.
@@ -85,7 +109,7 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 
 ## Cómo llegan aquí las versiones
 
-Cada versión se compila y se firma en el repositorio privado de Claqueta, que la entrega en la rama `incoming` de este repositorio: el APK y un `release.json` que lo describe. Entonces [`publish.yml`](.github/workflows/publish.yml):
+Cada versión se compila y se firma en el repositorio privado de Whatplay, que la entrega en la rama `incoming` de este repositorio: el APK y un `release.json` que lo describe. Entonces [`publish.yml`](.github/workflows/publish.yml):
 
 1. comprueba la entrega: el tamaño y el SHA-256 del APK, y que su `versionCode` sea mayor que el publicado;
 2. crea la release `v<versión>` con el APK y sus novedades;
@@ -99,7 +123,7 @@ Si algo falla a medias, se puede volver a ejecutar sin miedo: lo que ya estaba h
 | Campo | Qué es |
 |---|---|
 | `schema` | La versión del formato: 1. Si una app no conoce el esquema, no lo usa. |
-| `app` | `com.repotools.claqueta` |
+| `app` | `com.repotools.whatplay` |
 | `updated` | Cuándo cambió el archivo por última vez (UTC). |
 | `android` | La versión actual para Android, o `null` si aún no hay ninguna: `versionCode`, `versionName`, `date`, `minSdk`, `url` del APK, `size` en bytes, `sha256` del APK y `certSha256`, el SHA-256 del certificado con el que está firmado. |
 | `ios` | Reservado para cuando haya versión para iPhone y iPad; mientras tanto, `null`. |
