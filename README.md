@@ -23,9 +23,46 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.0-prueba83**, del 4 de noviembre de 2026 · Android 7.0 o superior · 46,6 MB
+**Última versión para Android: 2.0.0-prueba85**, del 4 de noviembre de 2026 · Android 7.0 o superior · 47,0 MB
 
-[Descargar whatplay-2.0.0-prueba83.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0-prueba83/whatplay-2.0.0-prueba83.apk) · SHA-256 `ea41d24913076d80b88d4c7debfa172a11438337ee91053c29b15d365aa4aa9e`
+[Descargar whatplay-2.0.0-prueba85.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0-prueba85/whatplay-2.0.0-prueba85.apk) · SHA-256 `ba12fcb1c3d76c878c1d032c3ab66a646ab130ff887eae3e07089fff6d172847`
+
+### 2.0.0-prueba85 · 4 de noviembre de 2026
+- Enviar a la tele: el botón de la cabecera y el del reproductor abren «Tus teles», con tus Chromecast, las teles LG y Samsung con la app Whatplay TV Link y WebCast, que lleva Whatplay al navegador de cualquier tele u ordenador. Para vincular la tele, escribe en el móvil el código que ves en ella (sin internet, la dirección y el PIN); lo que ves va siempre por la wifi de casa. Sin Premium, WebCast y las teles LG funcionan mientras te quede tiempo sin anuncios.
+- Si un bloqueador (un DNS privado, una app o VPN, el filtro del router) no deja llegar los anuncios, Whatplay te explica cómo quitarlo o te ofrece Premium; y donde hay que dar el consentimiento de los anuncios, si se activa, te pide aceptarlos o hacerte Premium. Si estabas enviando a la tele, sigue sonando y puedes dejar de enviar desde esa misma ventana.
+- Whatplay, en español, inglés, francés y alemán: elige el idioma en Ajustes › Apariencia › Idioma, o deja el del móvil.
+- La primera vez que abres Whatplay: una bienvenida con lo que puedes hacer (se puede saltar), las preguntas de los anuncios y de «Novedades», una guía rápida de dónde está cada cosa (se puede omitir) y la opción de quitar los anuncios con Whatplay Premium. Sale una sola vez; en la tele, solo la bienvenida.
+- Whatplay se actualiza sola desde Google Play: la versión nueva se descarga mientras usas la app y «Reiniciar» la instala; si no lo pulsas, se instala al salir de la app o al volver a abrirla, nunca con un vídeo en marcha. Cuando una versión es imprescindible, te pide actualizar antes de seguir.
+- Después de ver unos canales, al salir del reproductor, Google Play puede pedirte que valores Whatplay.
+- El gesto de atrás hace lo mismo que el botón de atrás de cada pantalla, con la misma transición: en las listas, Favoritos, la guía, Ajustes, Sincronización y al añadir una lista, la página ya no encoge siguiendo al dedo. En las hojas de abajo, el gesto las cierra como tocar fuera.
+- La guía rápida de la primera vez te enseña la app de verdad: unos bocadillos señalan Listas, «Añadir lista», Favoritos, Buscar y Ajustes, y el último cuenta el reproductor. «Omitir» o el gesto de atrás la cierran cuando quieras.
+- Al enviar a la tele un canal en TS, la imagen ya no se queda parada cuando la emisión cambia por dentro (lo que pasa cuando el servidor del canal vuelve a arrancar): el móvil sigue dándole vídeo y, si el audio que convierte no llega a tiempo, sigue en silencio en vez de pararse.
+- La cuenta de un proveedor (servidor, usuario y contraseña) se llama ahora «Cuenta de proveedor», en Añadir lista y en el filtro de Listas.
+- Ajustes › Acerca de: la política de privacidad y los términos de uso.
+- Menú lateral (el botón de tres rayas, arriba a la izquierda): Whatplay Premium, Ajustes, Sincronización, Novedades, la ayuda y el contacto con el soporte, valorar y compartir Whatplay, nuestras redes y lo legal. Y Ajustes, con un aspecto nuevo más limpio.
+- Whatplay Premium, renovado: la tienda enseña lo que incluye y los dos planes, con lo que ahorras con el anual, y en el reproductor la pastilla «Quitar anuncios» (o el tiempo que te queda sin anuncios) abre una hoja para ver un vídeo y sumar 30 minutos, o hacerte Premium.
+- Inicio enseña solo tus 5 últimos recientes (lo que dejaste a medias sigue en «Continuar viendo»), y con «Ocultar barras al desplazar» la cabecera ya no se queda escondida: vuelve sola al llegar arriba o cuando la lista cabe entera (por ejemplo, al filtrar o buscar) y al cambiar de lista o de pestaña.
+- Ajustes está ahora en el menú lateral, y la cabecera queda más despejada; en el Navegador no hay cabecera: solo su barra, con más sitio para la web. Whatplay sale en el idioma de tu móvil (en inglés si no es español, inglés, francés ni alemán; en español con el catalán, el gallego o el euskera), y lo puedes cambiar en Ajustes › Idioma, que ahora está en la página principal.
+- Listas enseña solo las listas que añades tú (por su dirección, de un archivo, de otra app o con una cuenta de proveedor); tus listas de favoritos están solo en Favoritos, y «Eliminar todas las listas» ya no las borra. Fuera la pastilla «Locales». En Buscar, dos pastillas nuevas: «Favoritos», si tienes alguno, y «Media», si hay vídeos en el móvil y Whatplay puede verlos. Y en la pastilla «Media» de Buscar puedes buscar también por formato: «.avi», «mkv» o «vacaciones .mp4» (la pestaña Media ya no lleva su propio buscador: está la lupa de arriba).
+- Los canales en directo cuya dirección no lleva extensión (como los de los paneles Xtream: servidor, puerto, usuario, contraseña y número) se ven aunque el servidor dé una lista HLS, redirija con un token a otro servidor, solo deje ver a reproductores como VLC o pida el vídeo por tramos; si el servidor corta el directo, se vuelve a conectar en vez de pasar al canal siguiente; el aviso de error dice por qué no se ve (con su código HTTP) o que la dirección es una lista de canales; y al pegar en «Servidor» la dirección de un canal así, salen solos el servidor, el usuario y la contraseña.
+- Al abrir un canal o un vídeo, mientras carga solo se ve el círculo de carga: los botones del reproductor salen al tocar la pantalla. Y si no se puede ver, al tocar la pantalla salen también las barras de arriba y de abajo (volver, favoritos, la guía, las opciones, bloquear…), sin tapar el aviso. En vertical con la guía abierta, los botones del vídeo de arriba van en su centro, con el círculo de carga.
+- En los canales en directo, el reproductor tiene abajo su barra, en el mismo sitio que la de un vídeo y con el tiempo donde siempre, y sin repetir «En directo» (ya está junto al nombre). En los que dejan volver atrás, llevar la barra al final vuelve al directo.
+- Un vídeo de una web compartido desde el reproductor se abre a la primera en la otra Whatplay: se busca en su página, como lo encontró quien lo compartió (el enlace que encontró él iba con su sesión y en otro móvil no sirve).
+- Recordatorios y grabaciones desde la guía, también con la app cerrada: toca un programa que aún no ha empezado (o mantén pulsado cualquiera) para que te avise antes, con la antelación que elijas y repitiendo el aviso si no lo ves, o para grabarlo, a él o a todos sus episodios. Avisa al empezar y al acabar cada grabación, y lo grabado se ve en «Recordatorios y grabaciones», en el menú lateral.
+- Las letras se ven igual de gruesas en todos los móviles (en los Xiaomi salían muy finas), y la cuadrícula y «Ocultar barras al desplazar» vienen encendidos de serie.
+- Al grabar puedes elegir tú el día, la hora a la que empieza y lo que dura, también en el reproductor (Opciones › «Grabar este canal», para cualquier canal aunque no tenga guía). Lo grabado sale en Inicio, en «Mis grabaciones», y la guía se llama ahora «Guía TV».
+- Las estaciones web cuyo reproductor no se carga hasta tocarlo (solo enseñan su botón de reproducir) se abren solas, también al abrir un canal compartido.
+- Si la web de una estación pide comprobar que eres una persona (un captcha o «pulsa para verificar que eres humano»), su página sale dentro del reproductor, sin ir al navegador: la pasas tú y el vídeo empieza ahí mismo.
+- La nueva Whatplay: al actualizar, tus listas, tus favoritos y los marcadores del navegador de la versión anterior pasan solos (y si compraste quitar los anuncios, lo sigues teniendo).
+- Whatplay Premium (mensual o anual) quita los anuncios; si pagaste la Whatplay de antes sin anuncios, la sigues teniendo así para siempre.
+- Si sigues suscrito a Whatplay desde una versión anterior, tu suscripción también quita los anuncios mientras dure.
+- Anuncios: de vez en cuando al abrir una lista, abajo del todo en el reproductor y al cambiar de canal; ver un vídeo da 30 minutos sin anuncios, acumulables.
+- Ajustes › Actualizaciones › Novedades: notificaciones con las novedades de Whatplay, solo si las activas.
+- Al abrir la app, las listas se actualizan en cuanto hay conexión (antes fallaban todas como si no hubiera internet), y todas aunque una no se pueda descargar.
+- Con «Ocultar barras al desplazar», también se esconde la barra de arriba de las listas y de tus favoritos, y la página llega hasta abajo del todo, sin una franja negra.
+- Sincronización: tus listas, favoritos y ajustes en todos tus dispositivos, iniciando sesión con Google (en tu Google Drive) o con Apple (Ajustes › Sincronización).
+- En el reproductor, el sombreado de los controles llega hasta arriba del todo, también bajo la barra de estado.
+- «Abrir en la web» abre la página a pantalla completa, como un canal embed, sin la barra de la dirección.
 
 ### 2.0.0-prueba83 · 4 de noviembre de 2026
 - Whatplay, en español, inglés, francés y alemán: elige el idioma en Ajustes › Apariencia › Idioma, o deja el del móvil.
