@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.0-prueba87**, del 4 de noviembre de 2026 · Android 7.0 o superior · 47,1 MB
+**Última versión para Android: 2.0.0-prueba88**, del 4 de noviembre de 2026 · Android 7.0 o superior · 47,2 MB
 
-[Descargar whatplay-2.0.0-prueba87.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0-prueba87/whatplay-2.0.0-prueba87.apk) · SHA-256 `6e2856a0d6e9aefcb60d887050839ae2296ded79ea333467555e923f263acbc6`
+[Descargar whatplay-2.0.0-prueba88.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0-prueba88/whatplay-2.0.0-prueba88.apk) · SHA-256 `cd0d73d1bce960b3298844ee2af6b6fb9d538f0ac8f4b28060cce9b66350e809`
+
+### 2.0.0-prueba88 · 4 de noviembre de 2026
+- En el reproductor de la tele, con los mandos a la vista, las flechas y OK mueven por los botones y los pulsan (ya se llega a «De la lista» y Favorito); con ellos ocultos, izquierda y derecha retroceden y avanzan enseñando solo la barra, y OK pausa. Atrás oculta los mandos y, si ya están ocultos, sale.
+- Cambiar de canal en la tele (desde «De la lista», anterior y siguiente, P+ y P− o «A continuación») ya no cierra el reproductor: pone el canal nuevo al momento, y anterior y siguiente salen siempre.
+- En la tele, el título y «A continuación» van más abajo, junto a la barra, y la carga y los errores arriba, sin tapar nada; el título es algo más pequeño y sin la línea de encima.
+- En la tele, los canales que son páginas web ya no salen como «Película» si no se sabe que lo son.
 
 ### 2.0.0-prueba87 · 4 de noviembre de 2026
 - Con una tele conectada (WebCast, TV Link o Chromecast) ya nunca se abre el reproductor del móvil: el vídeo de una estación web se busca sin pantalla y suena en la tele, también al elegirla desde la tele. Con un Chromecast, si la web pide demostrar que eres una persona, una notificación te pide abrirla en el móvil.
