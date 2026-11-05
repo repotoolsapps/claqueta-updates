@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.0**, del 5 de noviembre de 2026 · Android 7.0 o superior · 36,0 MB
+**Última versión para Android: 2.0.1**, del 5 de noviembre de 2026 · Android 7.0 o superior · 36,0 MB
 
-[Descargar whatplay-2.0.0.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0/whatplay-2.0.0.apk) · SHA-256 `879b2e01e9987af3724449354104fc03504c05bedf3f9ad94ccc68b93cb507be`
+[Descargar whatplay-2.0.1.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.1/whatplay-2.0.1.apk) · SHA-256 `96097ac754bed2117c7700224f1ec3b847e35289075cce326f2db1d3b5f99d6f`
+
+### 2.0.1 · 5 de noviembre de 2026
+- La Guía vuelve a abrirse en «Ahora»: en la 2.0.0 cerraba la app al abrirla con una guía importada.
 
 ### 2.0.0 · 5 de noviembre de 2026
 - Al actualizar desde la Whatplay de antes se pasan todas tus listas (las muy grandes, en cuanto hay conexión), con el nombre que les pusiste y sus bloqueos, y los de tus favoritos. Si tenías algo bloqueado con la huella, Whatplay te pide una vez crear un PIN para que siga protegido.

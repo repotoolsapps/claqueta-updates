@@ -1,19 +1,29 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-05T17:33:01Z",
+  "updated": "2026-11-05T18:42:14Z",
   "android": {
-    "versionCode": 200102,
-    "versionName": "2.0.0",
+    "versionCode": 200103,
+    "versionName": "2.0.1",
     "date": "2026-11-05",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.0/whatplay-2.0.0.apk",
-    "size": 36049904,
-    "sha256": "879b2e01e9987af3724449354104fc03504c05bedf3f9ad94ccc68b93cb507be",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.1/whatplay-2.0.1.apk",
+    "size": 36048808,
+    "sha256": "96097ac754bed2117c7700224f1ec3b847e35289075cce326f2db1d3b5f99d6f",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.1",
+      "date": "2026-11-05",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "La Guía vuelve a abrirse en «Ahora»: en la 2.0.0 cerraba la app al abrirla con una guía importada."
+      ]
+    },
     {
       "version": "2.0.0",
       "date": "2026-11-05",
