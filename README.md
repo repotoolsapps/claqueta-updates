@@ -23,9 +23,23 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.1**, del 5 de noviembre de 2026 · Android 7.0 o superior · 36,0 MB
+**Última versión para Android: 2.0.2**, del 6 de noviembre de 2026 · Android 7.0 o superior · 37,0 MB
 
-[Descargar whatplay-2.0.1.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.1/whatplay-2.0.1.apk) · SHA-256 `96097ac754bed2117c7700224f1ec3b847e35289075cce326f2db1d3b5f99d6f`
+[Descargar whatplay-2.0.2.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.2/whatplay-2.0.2.apk) · SHA-256 `b6465b3a5b83034d6714c414a127c27b8ff27e538482bb48c8d2e7a9776f7c23`
+
+### 2.0.2 · 6 de noviembre de 2026
+- Whatplay ya está también en italiano y en portugués de Brasil (la app, la de Android TV y WebCast).
+- Android TV: todo se maneja con el mando, con el foco siempre a la vista («Importar lista», «Solo reproducir», menús y reproductor), y la tele ya no pide cámara, compartir ni permiso de notificaciones.
+- Android TV con el aspecto de WebCast: menú arriba, Inicio con cartel, listas, guía, reproductor, Añadir lista y Ajustes, y Premium también se compra desde la tele.
+- En Android TV se usa gratis viendo anuncios de vídeo, igual que en el móvil (un vídeo da tiempo sin anuncios y Premium los quita).
+- El navegador de Android TV tiene un puntero que mueves con las flechas del mando: OK pulsa, en los bordes se desplaza la página y con Atrás o arriba del todo vuelves a la barra.
+- Envía una lista del móvil a tu Android TV por la misma wifi: abre «Añadir lista» en la tele y en el móvil pulsa «Compartir» › «Enviar a una tele con Whatplay». Va cifrada y se confirma con el mismo código en las dos pantallas.
+- La sincronización con Drive ya no se queja de que tus listas «ocupan demasiado»: las listas enormes que tienen dirección viajan por su dirección y cada aparato las descarga.
+- Con el motor «Automático» suenan las pistas AC-3 y E-AC-3 que el móvil no decodifica, aunque vayan junto a otra AAC, y dos pistas con el mismo nombre se distinguen.
+- «Abrir» en los avisos del navegador ya no cierra la app en los WebView antiguos, y avisa si ninguna app puede abrir la página.
+- WebCast vuelve a arrancar solo si Android cierra la app mientras estaba en marcha, y la tele sale de «Reconectando…».
+- Los errores al descargar una lista o una guía se explican claros y en tu idioma, y la hora sale en el idioma de la app y con el reloj de 12 o 24 horas del sistema.
+- Retoques en la Guía, Favoritos, Premium y en los textos largos en francés y alemán o con letra grande.
 
 ### 2.0.1 · 5 de noviembre de 2026
 - La Guía vuelve a abrirse en «Ahora»: en la 2.0.0 cerraba la app al abrirla con una guía importada.
