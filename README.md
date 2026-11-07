@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.6**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
+**Última versión para Android: 2.0.7**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
 
-[Descargar whatplay-2.0.6.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.6/whatplay-2.0.6.apk) · SHA-256 `0f15d3e89b6adcd30af1cd899a24de6cfbc918fd715975239972a6d5d4c458c8`
+[Descargar whatplay-2.0.7.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.7/whatplay-2.0.7.apk) · SHA-256 `31effcd9d1de96106e1a327e8e208c29dbfb1e2f8db1e1954f4e966577cdda9b`
+
+### 2.0.7 · 7 de noviembre de 2026
+- Los vídeos encontrados en una web (las estaciones web y lo que abres desde el navegador) ya se pueden descargar, en el móvil, en WebCast y en TV Link.
 
 ### 2.0.6 · 7 de noviembre de 2026
 - Descarga lo que no es en directo (películas, series, vídeos) desde el reproductor para verlo sin conexión: eliges la calidad, sigue aunque cierres el reproductor y se pausa o se cancela desde la notificación. Con Whatplay Premium o con tiempo sin anuncios; en Android TV, con Premium.
