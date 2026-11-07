@@ -1,19 +1,35 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-06T02:53:03Z",
+  "updated": "2026-11-07T12:02:29Z",
   "android": {
-    "versionCode": 200104,
-    "versionName": "2.0.2",
-    "date": "2026-11-06",
+    "versionCode": 200110,
+    "versionName": "2.0.6",
+    "date": "2026-11-07",
     "minSdk": 24,
-    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.2/whatplay-2.0.2.apk",
-    "size": 36969324,
-    "sha256": "b6465b3a5b83034d6714c414a127c27b8ff27e538482bb48c8d2e7a9776f7c23",
+    "url": "https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.6/whatplay-2.0.6.apk",
+    "size": 37194597,
+    "sha256": "0f15d3e89b6adcd30af1cd899a24de6cfbc918fd715975239972a6d5d4c458c8",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.6",
+      "date": "2026-11-07",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Descarga lo que no es en directo (películas, series, vídeos) desde el reproductor para verlo sin conexión: eliges la calidad, sigue aunque cierres el reproductor y se pausa o se cancela desde la notificación. Con Whatplay Premium o con tiempo sin anuncios; en Android TV, con Premium.",
+        "Nueva pantalla Descargas y la fila «Mis descargas» en Inicio; en Android TV, «Descargas» en el menú lateral. En WebCast y TV Link, «Descargar en el móvil» desde la tele.",
+        "En Ajustes › Whatplay Premium puedes canjear un código de Premium o de descuento.",
+        "Chromecast: con la tele conectada y sin nada sonando, o si un canal no se puede reproducir, la tele enseña una pantalla de Whatplay en vez del símbolo de Cast.",
+        "Android TV: «Añadir lista › Archivo» en todas las teles; si la tele no tiene con qué elegir archivos, sale un QR para enviarlo desde el móvil o el ordenador.",
+        "La app sigue funcionando con total normalidad aunque el servidor de Whatplay no responda o conteste mal, y la app TV Link de la tele ya no se queda en una página de error.",
+        "Android TV: Ajustes ya no ofrece «Avisar si uso datos móviles», la última fila se ve entera y el teclado de la pantalla solo lleva la «ñ» en español. En la ficha de un programa, «Ver recordatorios y grabaciones» se ve en todos los idiomas."
+      ]
+    },
     {
       "version": "2.0.2",
       "date": "2026-11-06",

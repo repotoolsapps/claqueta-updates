@@ -23,9 +23,18 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.2**, del 6 de noviembre de 2026 · Android 7.0 o superior · 37,0 MB
+**Última versión para Android: 2.0.6**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
 
-[Descargar whatplay-2.0.2.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.2/whatplay-2.0.2.apk) · SHA-256 `b6465b3a5b83034d6714c414a127c27b8ff27e538482bb48c8d2e7a9776f7c23`
+[Descargar whatplay-2.0.6.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.6/whatplay-2.0.6.apk) · SHA-256 `0f15d3e89b6adcd30af1cd899a24de6cfbc918fd715975239972a6d5d4c458c8`
+
+### 2.0.6 · 7 de noviembre de 2026
+- Descarga lo que no es en directo (películas, series, vídeos) desde el reproductor para verlo sin conexión: eliges la calidad, sigue aunque cierres el reproductor y se pausa o se cancela desde la notificación. Con Whatplay Premium o con tiempo sin anuncios; en Android TV, con Premium.
+- Nueva pantalla Descargas y la fila «Mis descargas» en Inicio; en Android TV, «Descargas» en el menú lateral. En WebCast y TV Link, «Descargar en el móvil» desde la tele.
+- En Ajustes › Whatplay Premium puedes canjear un código de Premium o de descuento.
+- Chromecast: con la tele conectada y sin nada sonando, o si un canal no se puede reproducir, la tele enseña una pantalla de Whatplay en vez del símbolo de Cast.
+- Android TV: «Añadir lista › Archivo» en todas las teles; si la tele no tiene con qué elegir archivos, sale un QR para enviarlo desde el móvil o el ordenador.
+- La app sigue funcionando con total normalidad aunque el servidor de Whatplay no responda o conteste mal, y la app TV Link de la tele ya no se queda en una página de error.
+- Android TV: Ajustes ya no ofrece «Avisar si uso datos móviles», la última fila se ve entera y el teclado de la pantalla solo lleva la «ñ» en español. En la ficha de un programa, «Ver recordatorios y grabaciones» se ve en todos los idiomas.
 
 ### 2.0.2 · 6 de noviembre de 2026
 - Whatplay ya está también en italiano y en portugués de Brasil (la app, la de Android TV y WebCast).
