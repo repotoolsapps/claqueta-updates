@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.8**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
+**Última versión para Android: 2.0.9**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
 
-[Descargar whatplay-2.0.8.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.8/whatplay-2.0.8.apk) · SHA-256 `1d90494ffea529b0708ca661b198727426544e3872d23b40221e00177ca542d8`
+[Descargar whatplay-2.0.9.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.9/whatplay-2.0.9.apk) · SHA-256 `1c4bd209a84a553197d4cc2d81a84686beb66e24dad8710eae1eff05e0b5dbbb`
+
+### 2.0.9 · 7 de noviembre de 2026
+- Cuando haya una actualización importante, la app te pedirá instalarla al abrirla.
 
 ### 2.0.8 · 7 de noviembre de 2026
 - Descargas: ya no se ofrece descargar los vídeos de las webs que no lo permiten en sus condiciones de uso (YouTube, las redes sociales y las plataformas de pago); se siguen viendo igual.
