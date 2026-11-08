@@ -23,9 +23,14 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.13**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,6 MB
+**Última versión para Android: 2.0.14**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
 
-[Descargar whatplay-2.0.13.apk](https://whatplay.es/apk/whatplay-2.0.13.apk) · SHA-256 `270034f6956bf84c157bf7171386e772804b83656f69d900791bae8d4e31fdde`
+[Descargar whatplay-2.0.14.apk](https://whatplay.es/apk/whatplay-2.0.14.apk) · SHA-256 `b9d1790b0a546d77292c93cbeed5e58d16e5ea9ffc50f71af35aa2c71804d6ee`
+
+### 2.0.14 · 8 de noviembre de 2026
+- El navegador busca con DuckDuckGo de serie, en tu idioma y tu país, y las webs se ven con el tema claro u oscuro de la app; Google, si lo eliges, con el dominio de tu país.
+- En el navegador, los enlaces que tocas se abren aunque vayan a otra web (también los resultados de los buscadores); solo se bloquea la publicidad. En las webs del reproductor, igual que antes.
+- Sin hueco encima del teclado ni con la tele conectada sin enviar nada, y la barra de direcciones ya no devuelve el cursor al principio al escribir.
 
 ### 2.0.13 · 8 de noviembre de 2026
 - Mantén pulsada una carpeta para abrir su menú: añadirla a favoritos o, si ya lo está, quitarla. En la tele, manteniendo pulsado OK.

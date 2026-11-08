@@ -1,19 +1,31 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T16:59:15Z",
+  "updated": "2026-11-08T18:39:44Z",
   "android": {
-    "versionCode": 200117,
-    "versionName": "2.0.13",
+    "versionCode": 200118,
+    "versionName": "2.0.14",
     "date": "2026-11-08",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.13.apk",
-    "size": 37596769,
-    "sha256": "270034f6956bf84c157bf7171386e772804b83656f69d900791bae8d4e31fdde",
+    "url": "https://whatplay.es/apk/whatplay-2.0.14.apk",
+    "size": 37675781,
+    "sha256": "b9d1790b0a546d77292c93cbeed5e58d16e5ea9ffc50f71af35aa2c71804d6ee",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.14",
+      "date": "2026-11-08",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "El navegador busca con DuckDuckGo de serie, en tu idioma y tu país, y las webs se ven con el tema claro u oscuro de la app; Google, si lo eliges, con el dominio de tu país.",
+        "En el navegador, los enlaces que tocas se abren aunque vayan a otra web (también los resultados de los buscadores); solo se bloquea la publicidad. En las webs del reproductor, igual que antes.",
+        "Sin hueco encima del teclado ni con la tele conectada sin enviar nada, y la barra de direcciones ya no devuelve el cursor al principio al escribir."
+      ]
+    },
     {
       "version": "2.0.13",
       "date": "2026-11-08",
