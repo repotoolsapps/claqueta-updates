@@ -1,19 +1,33 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T15:29:18Z",
+  "updated": "2026-11-08T16:59:15Z",
   "android": {
-    "versionCode": 200116,
-    "versionName": "2.0.12",
+    "versionCode": 200117,
+    "versionName": "2.0.13",
     "date": "2026-11-08",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.12.apk",
-    "size": 37577513,
-    "sha256": "ff7a010c1c11b34149c57b24a76a5be2b4aa9dbb222a28a8f3c34adbc038ea91",
+    "url": "https://whatplay.es/apk/whatplay-2.0.13.apk",
+    "size": 37596769,
+    "sha256": "270034f6956bf84c157bf7171386e772804b83656f69d900791bae8d4e31fdde",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.13",
+      "date": "2026-11-08",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Mantén pulsada una carpeta para abrir su menú: añadirla a favoritos o, si ya lo está, quitarla. En la tele, manteniendo pulsado OK.",
+        "El reproductor: la carga es un solo círculo en medio del vídeo, que ya no parpadea ni se mueve al tocar la pantalla, y el botón de reproducir y los de alrededor son oscuros con el icono blanco.",
+        "WebCast: la web de la tele se pone a pantalla completa con la primera pulsación del mando, y el vídeo ya no tiene las esquinas redondeadas.",
+        "Al añadir una lista puedes ponerle nombre, también en la tele; se mantiene al actualizarla.",
+        "Las listas Xtream con enlace get.php: si no dicen cuál es su guía, se usa la de su servidor (las que ya tienes la cogen al actualizarlas), y un enlace nuevo se añade como la cuenta Xtream que es, por categorías, así que las listas enormes ya se pueden añadir."
+      ]
+    },
     {
       "version": "2.0.12",
       "date": "2026-11-08",

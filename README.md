@@ -23,9 +23,16 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.12**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,6 MB
+**Última versión para Android: 2.0.13**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,6 MB
 
-[Descargar whatplay-2.0.12.apk](https://whatplay.es/apk/whatplay-2.0.12.apk) · SHA-256 `ff7a010c1c11b34149c57b24a76a5be2b4aa9dbb222a28a8f3c34adbc038ea91`
+[Descargar whatplay-2.0.13.apk](https://whatplay.es/apk/whatplay-2.0.13.apk) · SHA-256 `270034f6956bf84c157bf7171386e772804b83656f69d900791bae8d4e31fdde`
+
+### 2.0.13 · 8 de noviembre de 2026
+- Mantén pulsada una carpeta para abrir su menú: añadirla a favoritos o, si ya lo está, quitarla. En la tele, manteniendo pulsado OK.
+- El reproductor: la carga es un solo círculo en medio del vídeo, que ya no parpadea ni se mueve al tocar la pantalla, y el botón de reproducir y los de alrededor son oscuros con el icono blanco.
+- WebCast: la web de la tele se pone a pantalla completa con la primera pulsación del mando, y el vídeo ya no tiene las esquinas redondeadas.
+- Al añadir una lista puedes ponerle nombre, también en la tele; se mantiene al actualizarla.
+- Las listas Xtream con enlace get.php: si no dicen cuál es su guía, se usa la de su servidor (las que ya tienes la cogen al actualizarlas), y un enlace nuevo se añade como la cuenta Xtream que es, por categorías, así que las listas enormes ya se pueden añadir.
 
 ### 2.0.12 · 8 de noviembre de 2026
 - Mantén pulsado un canal para añadirlo a favoritos, copiar su dirección o abrirlo con otra app; mantén pulsada una carpeta para guardarla entera en favoritos, y una lista para ver sus opciones. En la tele, manteniendo pulsado OK.
