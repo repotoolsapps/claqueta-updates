@@ -1,19 +1,29 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T09:34:16Z",
+  "updated": "2026-11-08T10:20:10Z",
   "android": {
-    "versionCode": 200114,
-    "versionName": "2.0.10",
+    "versionCode": 200115,
+    "versionName": "2.0.11",
     "date": "2026-11-08",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.10.apk",
-    "size": 37540653,
-    "sha256": "3b46c96b0d5b86524c36f1845e08397b58fff7d678f3c027a5ba505fb2782f73",
+    "url": "https://whatplay.es/apk/whatplay-2.0.11.apk",
+    "size": 37545169,
+    "sha256": "21dbfa86152fa4a9052c02f3c4552c3e6b965b985f975c702b6c6a6d7ff34306",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.11",
+      "date": "2026-11-08",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Mejoras internas en los anuncios del móvil."
+      ]
+    },
     {
       "version": "2.0.10",
       "date": "2026-11-08",
