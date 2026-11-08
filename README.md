@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.9**, del 7 de noviembre de 2026 · Android 7.0 o superior · 37,2 MB
+**Última versión para Android: 2.0.10**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,5 MB
 
-[Descargar whatplay-2.0.9.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.9/whatplay-2.0.9.apk) · SHA-256 `1c4bd209a84a553197d4cc2d81a84686beb66e24dad8710eae1eff05e0b5dbbb`
+[Descargar whatplay-2.0.10.apk](https://github.com/repotoolsapps/claqueta-updates/releases/download/v2.0.10/whatplay-2.0.10.apk) · SHA-256 `3b46c96b0d5b86524c36f1845e08397b58fff7d678f3c027a5ba505fb2782f73`
+
+### 2.0.10 · 8 de noviembre de 2026
+- Las listas de los paneles Xtream que se añaden con su enlace get.php ya se ordenan por sus carpetas (por países), con sus logos, también en Android TV, WebCast y TV Link. Las que ya tenías se ordenan solas la próxima vez que se actualicen.
 
 ### 2.0.9 · 7 de noviembre de 2026
 - Cuando haya una actualización importante, la app te pedirá instalarla al abrirla.
