@@ -23,9 +23,16 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.11**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,5 MB
+**Última versión para Android: 2.0.12**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,6 MB
 
-[Descargar whatplay-2.0.11.apk](https://whatplay.es/apk/whatplay-2.0.11.apk) · SHA-256 `21dbfa86152fa4a9052c02f3c4552c3e6b965b985f975c702b6c6a6d7ff34306`
+[Descargar whatplay-2.0.12.apk](https://whatplay.es/apk/whatplay-2.0.12.apk) · SHA-256 `ff7a010c1c11b34149c57b24a76a5be2b4aa9dbb222a28a8f3c34adbc038ea91`
+
+### 2.0.12 · 8 de noviembre de 2026
+- Mantén pulsado un canal para añadirlo a favoritos, copiar su dirección o abrirlo con otra app; mantén pulsada una carpeta para guardarla entera en favoritos, y una lista para ver sus opciones. En la tele, manteniendo pulsado OK.
+- Los menús de opciones llevan su icono a la izquierda.
+- El reproductor enseña la carga dentro del botón de reproducir, como en la tele, y ya no salen dos círculos a la vez.
+- Los vídeos de las webs: se puede pasar la comprobación de que eres una persona aunque la tape un anuncio invisible, se ven los directos que la web reproduce ella misma, no se abre un anuncio como si fuera la película, y si no hay vídeo se dice por qué: que lo han borrado, que la dirección no existe o que el servidor de la web da error.
+- Si una opción de un canal no funciona, se prueba sola la siguiente antes de dar el error («La opción 1 no funciona: probando la 2…»), también enviando a la tele. El error sale solo cuando han fallado todas.
 
 ### 2.0.11 · 8 de noviembre de 2026
 - Mejoras internas en los anuncios del móvil.

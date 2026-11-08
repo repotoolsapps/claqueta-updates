@@ -1,19 +1,33 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T10:20:10Z",
+  "updated": "2026-11-08T15:29:18Z",
   "android": {
-    "versionCode": 200115,
-    "versionName": "2.0.11",
+    "versionCode": 200116,
+    "versionName": "2.0.12",
     "date": "2026-11-08",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.11.apk",
-    "size": 37545169,
-    "sha256": "21dbfa86152fa4a9052c02f3c4552c3e6b965b985f975c702b6c6a6d7ff34306",
+    "url": "https://whatplay.es/apk/whatplay-2.0.12.apk",
+    "size": 37577513,
+    "sha256": "ff7a010c1c11b34149c57b24a76a5be2b4aa9dbb222a28a8f3c34adbc038ea91",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.12",
+      "date": "2026-11-08",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Mantén pulsado un canal para añadirlo a favoritos, copiar su dirección o abrirlo con otra app; mantén pulsada una carpeta para guardarla entera en favoritos, y una lista para ver sus opciones. En la tele, manteniendo pulsado OK.",
+        "Los menús de opciones llevan su icono a la izquierda.",
+        "El reproductor enseña la carga dentro del botón de reproducir, como en la tele, y ya no salen dos círculos a la vez.",
+        "Los vídeos de las webs: se puede pasar la comprobación de que eres una persona aunque la tape un anuncio invisible, se ven los directos que la web reproduce ella misma, no se abre un anuncio como si fuera la película, y si no hay vídeo se dice por qué: que lo han borrado, que la dirección no existe o que el servidor de la web da error.",
+        "Si una opción de un canal no funciona, se prueba sola la siguiente antes de dar el error («La opción 1 no funciona: probando la 2…»), también enviando a la tele. El error sale solo cuando han fallado todas."
+      ]
+    },
     {
       "version": "2.0.11",
       "date": "2026-11-08",
