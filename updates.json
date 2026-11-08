@@ -1,19 +1,29 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T18:39:44Z",
+  "updated": "2026-11-08T18:57:25Z",
   "android": {
-    "versionCode": 200118,
-    "versionName": "2.0.14",
+    "versionCode": 200119,
+    "versionName": "2.0.15",
     "date": "2026-11-08",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.14.apk",
-    "size": 37675781,
-    "sha256": "b9d1790b0a546d77292c93cbeed5e58d16e5ea9ffc50f71af35aa2c71804d6ee",
+    "url": "https://whatplay.es/apk/whatplay-2.0.15.apk",
+    "size": 37675857,
+    "sha256": "ddda546b0634daf464f09e37ebccfef321e79b3233296ac15cbcbc7fe7a35763",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.15",
+      "date": "2026-11-08",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Las listas abiertas, también las de Favoritos, pasan por debajo de la barra de abajo como las pestañas: ya no queda un bloque de fondo que tapa la lista detrás de la barra."
+      ]
+    },
     {
       "version": "2.0.14",
       "date": "2026-11-08",

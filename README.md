@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.14**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
+**Última versión para Android: 2.0.15**, del 8 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
 
-[Descargar whatplay-2.0.14.apk](https://whatplay.es/apk/whatplay-2.0.14.apk) · SHA-256 `b9d1790b0a546d77292c93cbeed5e58d16e5ea9ffc50f71af35aa2c71804d6ee`
+[Descargar whatplay-2.0.15.apk](https://whatplay.es/apk/whatplay-2.0.15.apk) · SHA-256 `ddda546b0634daf464f09e37ebccfef321e79b3233296ac15cbcbc7fe7a35763`
+
+### 2.0.15 · 8 de noviembre de 2026
+- Las listas abiertas, también las de Favoritos, pasan por debajo de la barra de abajo como las pestañas: ya no queda un bloque de fondo que tapa la lista detrás de la barra.
 
 ### 2.0.14 · 8 de noviembre de 2026
 - El navegador busca con DuckDuckGo de serie, en tu idioma y tu país, y las webs se ven con el tema claro u oscuro de la app; Google, si lo eliges, con el dominio de tu país.
