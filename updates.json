@@ -1,19 +1,31 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-10T12:54:31Z",
+  "updated": "2026-11-10T13:59:11Z",
   "android": {
-    "versionCode": 200122,
-    "versionName": "2.0.18",
+    "versionCode": 200123,
+    "versionName": "2.0.19",
     "date": "2026-11-10",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.18.apk",
-    "size": 37697853,
-    "sha256": "d67b09ed31ae833a8b5b8d28707419ef993d29bc8c54e6b861247dda0b61f94f",
+    "url": "https://whatplay.es/apk/whatplay-2.0.19.apk",
+    "size": 37727597,
+    "sha256": "218787641bbf24e3ba7c1dc25c24059cc7baf2adc032bdbae803ede09fa81290",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.19",
+      "date": "2026-11-10",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Los canales web ya no piden el PIN del navegador: solo la pestaña Navegador. Siguen pidiendo el suyo si el canal o su lista están restringidos.",
+        "En Favoritos, mantener pulsada una lista abre su menú: editarla, subirla o bajarla, restringirla o eliminarla entera. También en la tele.",
+        "Dentro de una lista de favoritos, mantener pulsada una carpeta abre su menú, y en la tele también el de un canal."
+      ]
+    },
     {
       "version": "2.0.18",
       "date": "2026-11-10",

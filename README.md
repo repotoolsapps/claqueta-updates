@@ -23,9 +23,14 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.18**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
+**Última versión para Android: 2.0.19**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
 
-[Descargar whatplay-2.0.18.apk](https://whatplay.es/apk/whatplay-2.0.18.apk) · SHA-256 `d67b09ed31ae833a8b5b8d28707419ef993d29bc8c54e6b861247dda0b61f94f`
+[Descargar whatplay-2.0.19.apk](https://whatplay.es/apk/whatplay-2.0.19.apk) · SHA-256 `218787641bbf24e3ba7c1dc25c24059cc7baf2adc032bdbae803ede09fa81290`
+
+### 2.0.19 · 10 de noviembre de 2026
+- Los canales web ya no piden el PIN del navegador: solo la pestaña Navegador. Siguen pidiendo el suyo si el canal o su lista están restringidos.
+- En Favoritos, mantener pulsada una lista abre su menú: editarla, subirla o bajarla, restringirla o eliminarla entera. También en la tele.
+- Dentro de una lista de favoritos, mantener pulsada una carpeta abre su menú, y en la tele también el de un canal.
 
 ### 2.0.18 · 10 de noviembre de 2026
 - La pestaña Navegador va aparte: abrir un canal web ya no la cambia. El canal se abre en su propia pantalla y al cerrarlo no queda nada; con el globo, se lleva su página al navegador.
