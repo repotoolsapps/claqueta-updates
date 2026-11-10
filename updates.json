@@ -1,19 +1,30 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-08T18:57:25Z",
+  "updated": "2026-11-10T08:45:50Z",
   "android": {
-    "versionCode": 200119,
-    "versionName": "2.0.15",
-    "date": "2026-11-08",
+    "versionCode": 200120,
+    "versionName": "2.0.16",
+    "date": "2026-11-10",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.15.apk",
-    "size": 37675857,
-    "sha256": "ddda546b0634daf464f09e37ebccfef321e79b3233296ac15cbcbc7fe7a35763",
+    "url": "https://whatplay.es/apk/whatplay-2.0.16.apk",
+    "size": 37676473,
+    "sha256": "b048179db370dc9bed16e89167de6a9ed4915137e3954552080c22006f9ca67b",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.16",
+      "date": "2026-11-10",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "La lista de favoritos se ve como una lista: la misma cabecera, y carpetas y canales juntos, sin separarlos; y tiene su botón de buscar, que encuentra también lo que hay dentro de sus carpetas.",
+        "Buscar tiene un botón para volver atrás."
+      ]
+    },
     {
       "version": "2.0.15",
       "date": "2026-11-08",
