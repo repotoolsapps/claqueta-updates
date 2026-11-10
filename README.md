@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.19**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
+**Última versión para Android: 2.0.20**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,8 MB
 
-[Descargar whatplay-2.0.19.apk](https://whatplay.es/apk/whatplay-2.0.19.apk) · SHA-256 `218787641bbf24e3ba7c1dc25c24059cc7baf2adc032bdbae803ede09fa81290`
+[Descargar whatplay-2.0.20.apk](https://whatplay.es/apk/whatplay-2.0.20.apk) · SHA-256 `4ee8bee2bc11ac100bc2e6658fb08e4f3d398e80d12ae94cb4b284c20f70e974`
+
+### 2.0.20 · 10 de noviembre de 2026
+- En el menú de una lista, «Mostrar en Inicio»: desmarcada, esa lista y sus canales no salen en Inicio (sí en Listas, Buscar y la guía).
+- Recordatorios y grabaciones a mano, aunque no haya guía: eliges el canal, el día, la hora y la duración. Lo programado se cambia al tocarlo, y en el reproductor está también «Recordar este canal».
+- Guía TV: el selector de listas también en «Ahora», y «Editar guías» con todas tus guías para activarlas, desactivarlas, añadirlas o eliminarlas.
+- Los canales web ya no tienen el botón «Abrir en el navegador».
 
 ### 2.0.19 · 10 de noviembre de 2026
 - Los canales web ya no piden el PIN del navegador: solo la pestaña Navegador. Siguen pidiendo el suyo si el canal o su lista están restringidos.
