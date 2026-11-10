@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.16**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
+**Última versión para Android: 2.0.17**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
 
-[Descargar whatplay-2.0.16.apk](https://whatplay.es/apk/whatplay-2.0.16.apk) · SHA-256 `b048179db370dc9bed16e89167de6a9ed4915137e3954552080c22006f9ca67b`
+[Descargar whatplay-2.0.17.apk](https://whatplay.es/apk/whatplay-2.0.17.apk) · SHA-256 `4bbe0cbcc0fcafa05a1f14942720be7a672acfc33678a80a06129bbeae63c460`
+
+### 2.0.17 · 10 de noviembre de 2026
+- Cada canal y carpeta lleva un iconito en la esquina de su logo para saber qué es: directo, web, carpeta o lista externa.
+- En la tele, mantener pulsado OK abre el menú de una lista, carpeta o canal al soltarlo, y el menú ya no se cierra solo.
+- En el navegador, Atrás ya no deja la página en blanco: va a la página de antes o al inicio del navegador.
+- Cuando una web pide comprobar que eres una persona, se ve solo su comprobación, sobre fondo oscuro, y ningún anuncio puede ocupar su lugar.
 
 ### 2.0.16 · 10 de noviembre de 2026
 - La lista de favoritos se ve como una lista: la misma cabecera, y carpetas y canales juntos, sin separarlos; y tiene su botón de buscar, que encuentra también lo que hay dentro de sus carpetas.

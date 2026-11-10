@@ -1,19 +1,32 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-10T08:45:50Z",
+  "updated": "2026-11-10T10:24:02Z",
   "android": {
-    "versionCode": 200120,
-    "versionName": "2.0.16",
+    "versionCode": 200121,
+    "versionName": "2.0.17",
     "date": "2026-11-10",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.16.apk",
-    "size": 37676473,
-    "sha256": "b048179db370dc9bed16e89167de6a9ed4915137e3954552080c22006f9ca67b",
+    "url": "https://whatplay.es/apk/whatplay-2.0.17.apk",
+    "size": 37685985,
+    "sha256": "4bbe0cbcc0fcafa05a1f14942720be7a672acfc33678a80a06129bbeae63c460",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.17",
+      "date": "2026-11-10",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Cada canal y carpeta lleva un iconito en la esquina de su logo para saber qué es: directo, web, carpeta o lista externa.",
+        "En la tele, mantener pulsado OK abre el menú de una lista, carpeta o canal al soltarlo, y el menú ya no se cierra solo.",
+        "En el navegador, Atrás ya no deja la página en blanco: va a la página de antes o al inicio del navegador.",
+        "Cuando una web pide comprobar que eres una persona, se ve solo su comprobación, sobre fondo oscuro, y ningún anuncio puede ocupar su lugar."
+      ]
+    },
     {
       "version": "2.0.16",
       "date": "2026-11-10",
