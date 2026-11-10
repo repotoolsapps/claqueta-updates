@@ -23,9 +23,16 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.17**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
+**Última versión para Android: 2.0.18**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,7 MB
 
-[Descargar whatplay-2.0.17.apk](https://whatplay.es/apk/whatplay-2.0.17.apk) · SHA-256 `4bbe0cbcc0fcafa05a1f14942720be7a672acfc33678a80a06129bbeae63c460`
+[Descargar whatplay-2.0.18.apk](https://whatplay.es/apk/whatplay-2.0.18.apk) · SHA-256 `d67b09ed31ae833a8b5b8d28707419ef993d29bc8c54e6b861247dda0b61f94f`
+
+### 2.0.18 · 10 de noviembre de 2026
+- La pestaña Navegador va aparte: abrir un canal web ya no la cambia. El canal se abre en su propia pantalla y al cerrarlo no queda nada; con el globo, se lleva su página al navegador.
+- El icono de web sale solo en los canales que se abren como web.
+- Inicio se abre arriba del todo, con «Continuar viendo» a la vista.
+- Si tras pasar la comprobación de humano la web no puede cargar su vídeo, se dice y se pasa a la siguiente opción, en vez de quedarse esperando.
+- Una web que antes redirigía a una dirección que ya no existe se vuelve a pedir sin lo guardado, y se dice bien cuando la web de su reproductor ya no existe o no responde.
 
 ### 2.0.17 · 10 de noviembre de 2026
 - Cada canal y carpeta lleva un iconito en la esquina de su logo para saber qué es: directo, web, carpeta o lista externa.
