@@ -1,19 +1,30 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-11T18:25:19Z",
+  "updated": "2026-11-11T22:18:23Z",
   "android": {
-    "versionCode": 200127,
-    "versionName": "2.0.23",
+    "versionCode": 200128,
+    "versionName": "2.0.24",
     "date": "2026-11-11",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.23.apk",
-    "size": 37973023,
-    "sha256": "c02a96f2a88040189cb536d88e77eee0ec4658983776f492c291c756902a7148",
+    "url": "https://whatplay.es/apk/whatplay-2.0.24.apk",
+    "size": 37977935,
+    "sha256": "b07201828ae4a633c5f06c38baa93c5dc027a0999cf5b166bd698b06cbceaaec",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.24",
+      "date": "2026-11-11",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Webs de vídeo: ya no se queda la pantalla en negro con «La web pide comprobar que eres una persona» cuando no hay nada que pulsar, y los saltos de la publicidad de la página (como en luluvid) ya no impiden encontrar el vídeo.",
+        "Nunca se abre como vídeo del canal una pista de solo sonido, un anuncio ni un vídeo promocional en bucle: se espera a la lista completa de calidades y se abre el vídeo con su sonido. Un vídeo que se queda sin cargar se vuelve a pedir."
+      ]
+    },
     {
       "version": "2.0.23",
       "date": "2026-11-11",

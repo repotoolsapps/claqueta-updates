@@ -23,9 +23,13 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.23**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
+**Última versión para Android: 2.0.24**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
 
-[Descargar whatplay-2.0.23.apk](https://whatplay.es/apk/whatplay-2.0.23.apk) · SHA-256 `c02a96f2a88040189cb536d88e77eee0ec4658983776f492c291c756902a7148`
+[Descargar whatplay-2.0.24.apk](https://whatplay.es/apk/whatplay-2.0.24.apk) · SHA-256 `b07201828ae4a633c5f06c38baa93c5dc027a0999cf5b166bd698b06cbceaaec`
+
+### 2.0.24 · 11 de noviembre de 2026
+- Webs de vídeo: ya no se queda la pantalla en negro con «La web pide comprobar que eres una persona» cuando no hay nada que pulsar, y los saltos de la publicidad de la página (como en luluvid) ya no impiden encontrar el vídeo.
+- Nunca se abre como vídeo del canal una pista de solo sonido, un anuncio ni un vídeo promocional en bucle: se espera a la lista completa de calidades y se abre el vídeo con su sonido. Un vídeo que se queda sin cargar se vuelve a pedir.
 
 ### 2.0.23 · 11 de noviembre de 2026
 - Las webs de vídeo que hacen una comprobación invisible antes de dar el vídeo, como flyf.lat, ya se abren: Whatplay espera a que termine en vez de darlas por perdidas, y abre la calidad completa, con su sonido.
