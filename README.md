@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.22**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
+**Última versión para Android: 2.0.23**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
 
-[Descargar whatplay-2.0.22.apk](https://whatplay.es/apk/whatplay-2.0.22.apk) · SHA-256 `446124b02758ac1dae2162c17ab4b63535ac2c13a90c86bec69297a080d39491`
+[Descargar whatplay-2.0.23.apk](https://whatplay.es/apk/whatplay-2.0.23.apk) · SHA-256 `c02a96f2a88040189cb536d88e77eee0ec4658983776f492c291c756902a7148`
+
+### 2.0.23 · 11 de noviembre de 2026
+- Las webs de vídeo que hacen una comprobación invisible antes de dar el vídeo, como flyf.lat, ya se abren: Whatplay espera a que termine en vez de darlas por perdidas, y abre la calidad completa, con su sonido.
 
 ### 2.0.22 · 11 de noviembre de 2026
 - El móvil como mando de la tele: con WebCast o TV Link, el botón «Mando» (en «Tus teles», en el minicontrol y en la tarjeta de Inicio) te deja moverte por Whatplay en la tele sin puntero, buscar escribiendo en el móvil y cambiar el volumen de la tele.
