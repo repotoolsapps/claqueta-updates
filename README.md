@@ -23,9 +23,18 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.20**, del 10 de noviembre de 2026 · Android 7.0 o superior · 37,8 MB
+**Última versión para Android: 2.0.22**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
 
-[Descargar whatplay-2.0.20.apk](https://whatplay.es/apk/whatplay-2.0.20.apk) · SHA-256 `4ee8bee2bc11ac100bc2e6658fb08e4f3d398e80d12ae94cb4b284c20f70e974`
+[Descargar whatplay-2.0.22.apk](https://whatplay.es/apk/whatplay-2.0.22.apk) · SHA-256 `446124b02758ac1dae2162c17ab4b63535ac2c13a90c86bec69297a080d39491`
+
+### 2.0.22 · 11 de noviembre de 2026
+- El móvil como mando de la tele: con WebCast o TV Link, el botón «Mando» (en «Tus teles», en el minicontrol y en la tarjeta de Inicio) te deja moverte por Whatplay en la tele sin puntero, buscar escribiendo en el móvil y cambiar el volumen de la tele.
+- Guía TV: la lupa de arriba busca por canal, por programa o por tipo (cine, noticias, deportes, series…) en la misma página. Ocupa el sitio del botón de grabar; «Recordatorios y grabaciones» se abre desde el menú y desde cada programa.
+- La Guía TV, «Recordatorios y grabaciones», Descargas y Buscar pasan por debajo de la barra de abajo, como las demás páginas: ya no queda un bloque de fondo detrás de ella.
+- Navegador: con «Ocultar barras al desplazar», la barra de abajo se esconde al bajar por la web (también en un PDF) y vuelve al subir.
+- Favoritos: cada favorito cumple el control parental de su lista o carpeta de Favoritos en todas partes (Inicio, Favoritos, el reproductor, la Guía TV y la tele). El PIN del navegador ya no cuenta: lo que guardaste desde él deja de pedirlo si su lista no está restringida.
+- Fire TV: el botón de comprar Premium abre la compra de la Amazon Appstore.
+- Arreglos: la app ya no se cierra al abrirla en un móvil lento si WebCast se había cortado, y en Android 7 y 8 el navegador ya no saca el teclado al deslizar la página después de abrir una dirección.
 
 ### 2.0.20 · 10 de noviembre de 2026
 - En el menú de una lista, «Mostrar en Inicio»: desmarcada, esa lista y sus canales no salen en Inicio (sí en Listas, Buscar y la guía).
