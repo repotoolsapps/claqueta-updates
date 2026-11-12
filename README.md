@@ -23,9 +23,13 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.24**, del 11 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
+**Última versión para Android: 2.0.25**, del 12 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
 
-[Descargar whatplay-2.0.24.apk](https://whatplay.es/apk/whatplay-2.0.24.apk) · SHA-256 `b07201828ae4a633c5f06c38baa93c5dc027a0999cf5b166bd698b06cbceaaec`
+[Descargar whatplay-2.0.25.apk](https://whatplay.es/apk/whatplay-2.0.25.apk) · SHA-256 `4a19812e268affbd9ed125767dac43289e1e150b62c5a020365b78e9328ddae5`
+
+### 2.0.25 · 12 de noviembre de 2026
+- Las guías de TV se comparten como las listas: en «Editar guías», cada una tiene su botón de compartir, con su código QR, su enlace o su archivo. Y se añaden igual que una lista: con su dirección, un archivo, un código QR o el portapapeles.
+- Si lo que añades como lista, o lo que abres o compartes con Whatplay, es una guía de TV (también en .gz o .zip), se añade a la Guía TV en vez de dar error.
 
 ### 2.0.24 · 11 de noviembre de 2026
 - Webs de vídeo: ya no se queda la pantalla en negro con «La web pide comprobar que eres una persona» cuando no hay nada que pulsar, y los saltos de la publicidad de la página (como en luluvid) ya no impiden encontrar el vídeo.

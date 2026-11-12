@@ -1,19 +1,30 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-11T22:18:23Z",
+  "updated": "2026-11-12T04:18:55Z",
   "android": {
-    "versionCode": 200128,
-    "versionName": "2.0.24",
-    "date": "2026-11-11",
+    "versionCode": 200129,
+    "versionName": "2.0.25",
+    "date": "2026-11-12",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.24.apk",
-    "size": 37977935,
-    "sha256": "b07201828ae4a633c5f06c38baa93c5dc027a0999cf5b166bd698b06cbceaaec",
+    "url": "https://whatplay.es/apk/whatplay-2.0.25.apk",
+    "size": 38011379,
+    "sha256": "4a19812e268affbd9ed125767dac43289e1e150b62c5a020365b78e9328ddae5",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.25",
+      "date": "2026-11-12",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Las guías de TV se comparten como las listas: en «Editar guías», cada una tiene su botón de compartir, con su código QR, su enlace o su archivo. Y se añaden igual que una lista: con su dirección, un archivo, un código QR o el portapapeles.",
+        "Si lo que añades como lista, o lo que abres o compartes con Whatplay, es una guía de TV (también en .gz o .zip), se añade a la Guía TV en vez de dar error."
+      ]
+    },
     {
       "version": "2.0.24",
       "date": "2026-11-11",
