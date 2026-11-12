@@ -23,9 +23,15 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.25**, del 12 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
+**Última versión para Android: 2.0.26**, del 12 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
 
-[Descargar whatplay-2.0.25.apk](https://whatplay.es/apk/whatplay-2.0.25.apk) · SHA-256 `4a19812e268affbd9ed125767dac43289e1e150b62c5a020365b78e9328ddae5`
+[Descargar whatplay-2.0.26.apk](https://whatplay.es/apk/whatplay-2.0.26.apk) · SHA-256 `3c9821910d74e51c4acf0f9ca57dd19b958f1ae67c1ed5928f70efe52731bae3`
+
+### 2.0.26 · 12 de noviembre de 2026
+- La guía de TV que trae una lista se importa sola al añadirla o al actualizarla, como la de una cuenta Xtream, también en las listas que ya tenías. Las que desactives o elimines en «Editar guías» no vuelven solas.
+- Envía tus guías de TV a la tele con Whatplay, como las listas: en «Editar guías», «Compartir» › «Enviar a una tele con Whatplay». Las teles con una versión de antes siguen recibiendo las listas como siempre.
+- Android TV: cuando sale una versión nueva, y después de actualizar, el botón «Actualizar» o «Entendido» ya está elegido: con OK se actualiza o se cierra sin bajar por las novedades, que se siguen leyendo con la flecha arriba.
+- Arreglo: en «Añadir lista», al importar, la página baja sola hasta «Abrir lista», que en las pantallas bajas quedaba detrás de la barra de abajo.
 
 ### 2.0.25 · 12 de noviembre de 2026
 - Las guías de TV se comparten como las listas: en «Editar guías», cada una tiene su botón de compartir, con su código QR, su enlace o su archivo. Y se añaden igual que una lista: con su dirección, un archivo, un código QR o el portapapeles.

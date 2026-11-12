@@ -1,19 +1,32 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-12T04:18:55Z",
+  "updated": "2026-11-12T07:31:10Z",
   "android": {
-    "versionCode": 200129,
-    "versionName": "2.0.25",
+    "versionCode": 200130,
+    "versionName": "2.0.26",
     "date": "2026-11-12",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.25.apk",
-    "size": 38011379,
-    "sha256": "4a19812e268affbd9ed125767dac43289e1e150b62c5a020365b78e9328ddae5",
+    "url": "https://whatplay.es/apk/whatplay-2.0.26.apk",
+    "size": 38034339,
+    "sha256": "3c9821910d74e51c4acf0f9ca57dd19b958f1ae67c1ed5928f70efe52731bae3",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.26",
+      "date": "2026-11-12",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "La guía de TV que trae una lista se importa sola al añadirla o al actualizarla, como la de una cuenta Xtream, también en las listas que ya tenías. Las que desactives o elimines en «Editar guías» no vuelven solas.",
+        "Envía tus guías de TV a la tele con Whatplay, como las listas: en «Editar guías», «Compartir» › «Enviar a una tele con Whatplay». Las teles con una versión de antes siguen recibiendo las listas como siempre.",
+        "Android TV: cuando sale una versión nueva, y después de actualizar, el botón «Actualizar» o «Entendido» ya está elegido: con OK se actualiza o se cierra sin bajar por las novedades, que se siguen leyendo con la flecha arriba.",
+        "Arreglo: en «Añadir lista», al importar, la página baja sola hasta «Abrir lista», que en las pantallas bajas quedaba detrás de la barra de abajo."
+      ]
+    },
     {
       "version": "2.0.25",
       "date": "2026-11-12",
