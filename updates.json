@@ -1,19 +1,31 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-12T07:31:10Z",
+  "updated": "2026-11-13T19:48:35Z",
   "android": {
-    "versionCode": 200130,
-    "versionName": "2.0.26",
-    "date": "2026-11-12",
+    "versionCode": 200132,
+    "versionName": "2.0.28",
+    "date": "2026-11-13",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.26.apk",
-    "size": 38034339,
-    "sha256": "3c9821910d74e51c4acf0f9ca57dd19b958f1ae67c1ed5928f70efe52731bae3",
+    "url": "https://whatplay.es/apk/whatplay-2.0.28.apk",
+    "size": 38051123,
+    "sha256": "a3f0ed9a8fa11f1a96f2682b40003b6e0dc437948b24e9b29e7e5b15414eab9e",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.28",
+      "date": "2026-11-13",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Navegador: los anuncios que se quedan tu toque ya no te llevan a sus páginas. Las capas invisibles, los botones falsos encima del vídeo y los enlaces que cambian de destino al tocarlos se quitan de en medio, y el toque llega a lo que tapaban. Y la página que abres ya no puede llevarte a la web de un anuncio nada más cargar: solo a la misma web si se ha cambiado de dominio. Los enlaces normales a otras webs se abren como siempre.",
+        "Favoritos y compartir: el vídeo que sacas del navegador se guarda con lo que elegiste en su web (el idioma y el servidor, como «CAST» y «Nupload»). Al abrirlo, o cuando lo abre quien lo recibe, Whatplay va directo a ese servidor y, si no puede, abre la página y toca por ti esos mismos botones.",
+        "Al editar un canal de tus listas o de favoritos ves sus opciones y puedes añadir, cambiar o quitar hasta tres. La que guarda los botones de su página dice cuáles («CAST» › «Nupload»), y puedes quitarlos."
+      ]
+    },
     {
       "version": "2.0.26",
       "date": "2026-11-12",

@@ -23,9 +23,14 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.26**, del 12 de noviembre de 2026 · Android 7.0 o superior · 38,0 MB
+**Última versión para Android: 2.0.28**, del 13 de noviembre de 2026 · Android 7.0 o superior · 38,1 MB
 
-[Descargar whatplay-2.0.26.apk](https://whatplay.es/apk/whatplay-2.0.26.apk) · SHA-256 `3c9821910d74e51c4acf0f9ca57dd19b958f1ae67c1ed5928f70efe52731bae3`
+[Descargar whatplay-2.0.28.apk](https://whatplay.es/apk/whatplay-2.0.28.apk) · SHA-256 `a3f0ed9a8fa11f1a96f2682b40003b6e0dc437948b24e9b29e7e5b15414eab9e`
+
+### 2.0.28 · 13 de noviembre de 2026
+- Navegador: los anuncios que se quedan tu toque ya no te llevan a sus páginas. Las capas invisibles, los botones falsos encima del vídeo y los enlaces que cambian de destino al tocarlos se quitan de en medio, y el toque llega a lo que tapaban. Y la página que abres ya no puede llevarte a la web de un anuncio nada más cargar: solo a la misma web si se ha cambiado de dominio. Los enlaces normales a otras webs se abren como siempre.
+- Favoritos y compartir: el vídeo que sacas del navegador se guarda con lo que elegiste en su web (el idioma y el servidor, como «CAST» y «Nupload»). Al abrirlo, o cuando lo abre quien lo recibe, Whatplay va directo a ese servidor y, si no puede, abre la página y toca por ti esos mismos botones.
+- Al editar un canal de tus listas o de favoritos ves sus opciones y puedes añadir, cambiar o quitar hasta tres. La que guarda los botones de su página dice cuáles («CAST» › «Nupload»), y puedes quitarlos.
 
 ### 2.0.26 · 12 de noviembre de 2026
 - La guía de TV que trae una lista se importa sola al añadirla o al actualizarla, como la de una cuenta Xtream, también en las listas que ya tenías. Las que desactives o elimines en «Editar guías» no vuelven solas.
