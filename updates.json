@@ -1,19 +1,33 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-13T19:48:35Z",
+  "updated": "2026-11-14T23:40:43Z",
   "android": {
-    "versionCode": 200132,
-    "versionName": "2.0.28",
-    "date": "2026-11-13",
+    "versionCode": 200133,
+    "versionName": "2.0.29",
+    "date": "2026-11-14",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.28.apk",
-    "size": 38051123,
-    "sha256": "a3f0ed9a8fa11f1a96f2682b40003b6e0dc437948b24e9b29e7e5b15414eab9e",
+    "url": "https://whatplay.es/apk/whatplay-2.0.29.apk",
+    "size": 38171811,
+    "sha256": "dc5b2d58340425abd7bee2bcca6848818189f4f9fdba9e8f400e2b41ef8970d9",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.29",
+      "date": "2026-11-14",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Enviar a la tele por DLNA: las teles y aparatos DLNA de tu wifi (Hisense, adaptadores AnyCast, Samsung, LG, Sony…) salen en «Tus teles» y reproducen el vídeo con su propio reproductor; lo que no pueden abrir solas se lo prepara el móvil. Gratis y sin límite, como el Chromecast.",
+        "Un solo envío a la vez: al elegir una tele se corta la anterior (Chromecast, WebCast, TV Link o DLNA), y «Desconectar» la para de verdad, también si en ese momento estaba reconectando.",
+        "«Todo por la VPN»: con la VPN conectada, nada de lo que ves en la tele sale por fuera de ella. Si la VPN se conecta a mitad de un vídeo, se vuelve a cargar por el móvil.",
+        "Inicio: con listas añadidas, la bienvenida ya no enseña «Añadir lista» ni «Crear una lista», y tus listas salen sin tener que bajar.",
+        "Navegador: los reproductores de algunas webs que comprobaban que eres una persona y luego decían «Not allowed» o «Stream offline» (solo se veían en Chrome) ya se ven en Whatplay."
+      ]
+    },
     {
       "version": "2.0.28",
       "date": "2026-11-13",

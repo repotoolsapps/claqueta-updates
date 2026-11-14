@@ -23,9 +23,16 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.28**, del 13 de noviembre de 2026 · Android 7.0 o superior · 38,1 MB
+**Última versión para Android: 2.0.29**, del 14 de noviembre de 2026 · Android 7.0 o superior · 38,2 MB
 
-[Descargar whatplay-2.0.28.apk](https://whatplay.es/apk/whatplay-2.0.28.apk) · SHA-256 `a3f0ed9a8fa11f1a96f2682b40003b6e0dc437948b24e9b29e7e5b15414eab9e`
+[Descargar whatplay-2.0.29.apk](https://whatplay.es/apk/whatplay-2.0.29.apk) · SHA-256 `dc5b2d58340425abd7bee2bcca6848818189f4f9fdba9e8f400e2b41ef8970d9`
+
+### 2.0.29 · 14 de noviembre de 2026
+- Enviar a la tele por DLNA: las teles y aparatos DLNA de tu wifi (Hisense, adaptadores AnyCast, Samsung, LG, Sony…) salen en «Tus teles» y reproducen el vídeo con su propio reproductor; lo que no pueden abrir solas se lo prepara el móvil. Gratis y sin límite, como el Chromecast.
+- Un solo envío a la vez: al elegir una tele se corta la anterior (Chromecast, WebCast, TV Link o DLNA), y «Desconectar» la para de verdad, también si en ese momento estaba reconectando.
+- «Todo por la VPN»: con la VPN conectada, nada de lo que ves en la tele sale por fuera de ella. Si la VPN se conecta a mitad de un vídeo, se vuelve a cargar por el móvil.
+- Inicio: con listas añadidas, la bienvenida ya no enseña «Añadir lista» ni «Crear una lista», y tus listas salen sin tener que bajar.
+- Navegador: los reproductores de algunas webs que comprobaban que eres una persona y luego decían «Not allowed» o «Stream offline» (solo se veían en Chrome) ya se ven en Whatplay.
 
 ### 2.0.28 · 13 de noviembre de 2026
 - Navegador: los anuncios que se quedan tu toque ya no te llevan a sus páginas. Las capas invisibles, los botones falsos encima del vídeo y los enlaces que cambian de destino al tocarlos se quitan de en medio, y el toque llega a lo que tapaban. Y la página que abres ya no puede llevarte a la web de un anuncio nada más cargar: solo a la misma web si se ha cambiado de dominio. Los enlaces normales a otras webs se abren como siempre.
