@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.29**, del 14 de noviembre de 2026 · Android 7.0 o superior · 38,2 MB
+**Última versión para Android: 2.0.32**, del 26 de noviembre de 2026 · Android 7.0 o superior · 39,2 MB
 
-[Descargar whatplay-2.0.29.apk](https://whatplay.es/apk/whatplay-2.0.29.apk) · SHA-256 `dc5b2d58340425abd7bee2bcca6848818189f4f9fdba9e8f400e2b41ef8970d9`
+[Descargar whatplay-2.0.32.apk](https://whatplay.es/apk/whatplay-2.0.32.apk) · SHA-256 `dc933cf48d0c304499d432f1812355e4e8cf86fd7e9a8604d6c5f04e2d331ff9`
+
+### 2.0.32 · 26 de noviembre de 2026
+- Corrección de errores.
 
 ### 2.0.29 · 14 de noviembre de 2026
 - Enviar a la tele por DLNA: las teles y aparatos DLNA de tu wifi (Hisense, adaptadores AnyCast, Samsung, LG, Sony…) salen en «Tus teles» y reproducen el vídeo con su propio reproductor; lo que no pueden abrir solas se lo prepara el móvil. Gratis y sin límite, como el Chromecast.

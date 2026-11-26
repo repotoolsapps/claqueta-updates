@@ -1,19 +1,29 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-14T23:40:43Z",
+  "updated": "2026-11-26T04:09:20Z",
   "android": {
-    "versionCode": 200133,
-    "versionName": "2.0.29",
-    "date": "2026-11-14",
+    "versionCode": 200136,
+    "versionName": "2.0.32",
+    "date": "2026-11-26",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.29.apk",
-    "size": 38171811,
-    "sha256": "dc5b2d58340425abd7bee2bcca6848818189f4f9fdba9e8f400e2b41ef8970d9",
+    "url": "https://whatplay.es/apk/whatplay-2.0.32.apk",
+    "size": 39235563,
+    "sha256": "dc933cf48d0c304499d432f1812355e4e8cf86fd7e9a8604d6c5f04e2d331ff9",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.32",
+      "date": "2026-11-26",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Corrección de errores."
+      ]
+    },
     {
       "version": "2.0.29",
       "date": "2026-11-14",
