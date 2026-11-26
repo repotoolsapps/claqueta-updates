@@ -23,9 +23,12 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.32**, del 26 de noviembre de 2026 · Android 7.0 o superior · 39,2 MB
+**Última versión para Android: 2.0.33**, del 26 de noviembre de 2026 · Android 7.0 o superior · 39,2 MB
 
-[Descargar whatplay-2.0.32.apk](https://whatplay.es/apk/whatplay-2.0.32.apk) · SHA-256 `dc933cf48d0c304499d432f1812355e4e8cf86fd7e9a8604d6c5f04e2d331ff9`
+[Descargar whatplay-2.0.33.apk](https://whatplay.es/apk/whatplay-2.0.33.apk) · SHA-256 `51888d7e06f41e2cad649f28f1db0094c31dedb82416c8bab2681fc4a1e67cc1`
+
+### 2.0.33 · 26 de noviembre de 2026
+- Corrección de errores.
 
 ### 2.0.32 · 26 de noviembre de 2026
 - Corrección de errores.
