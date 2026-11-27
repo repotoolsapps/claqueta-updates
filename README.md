@@ -23,9 +23,14 @@ Para comprobar una descarga a mano, el SHA-256 de cada APK está en sus notas y 
 <!-- novedades:inicio -->
 <!-- Este bloque lo escribe .github/workflows/publish.yml con cada versión: no lo edites a mano. -->
 
-**Última versión para Android: 2.0.33**, del 26 de noviembre de 2026 · Android 7.0 o superior · 39,2 MB
+**Última versión para Android: 2.0.34**, del 27 de noviembre de 2026 · Android 7.0 o superior · 39,3 MB
 
-[Descargar whatplay-2.0.33.apk](https://whatplay.es/apk/whatplay-2.0.33.apk) · SHA-256 `51888d7e06f41e2cad649f28f1db0094c31dedb82416c8bab2681fc4a1e67cc1`
+[Descargar whatplay-2.0.34.apk](https://whatplay.es/apk/whatplay-2.0.34.apk) · SHA-256 `fa229f4f13b22e720ace011a92959a66e91c89d15a02d8c5cec574631cb82988`
+
+### 2.0.34 · 27 de noviembre de 2026
+- Invita a un amigo: cuando instale Whatplay con tu enlace y vea algo, cada uno recibe 24 horas sin anuncios.
+- Whatplay Premium para siempre, con un solo pago.
+- Corrección de errores.
 
 ### 2.0.33 · 26 de noviembre de 2026
 - Corrección de errores.

@@ -1,19 +1,31 @@
 {
   "schema": 1,
   "app": "com.repotools.whatplay",
-  "updated": "2026-11-26T15:01:08Z",
+  "updated": "2026-11-27T00:01:04Z",
   "android": {
-    "versionCode": 200137,
-    "versionName": "2.0.33",
-    "date": "2026-11-26",
+    "versionCode": 200138,
+    "versionName": "2.0.34",
+    "date": "2026-11-27",
     "minSdk": 24,
-    "url": "https://whatplay.es/apk/whatplay-2.0.33.apk",
-    "size": 39246031,
-    "sha256": "51888d7e06f41e2cad649f28f1db0094c31dedb82416c8bab2681fc4a1e67cc1",
+    "url": "https://whatplay.es/apk/whatplay-2.0.34.apk",
+    "size": 39320827,
+    "sha256": "fa229f4f13b22e720ace011a92959a66e91c89d15a02d8c5cec574631cb82988",
     "certSha256": "1d1b340a22fc361a9b859788edbd4e0aae7d5d6169feb8b34fca1c3859486a41"
   },
   "ios": null,
   "releases": [
+    {
+      "version": "2.0.34",
+      "date": "2026-11-27",
+      "platforms": [
+        "android"
+      ],
+      "notes": [
+        "Invita a un amigo: cuando instale Whatplay con tu enlace y vea algo, cada uno recibe 24 horas sin anuncios.",
+        "Whatplay Premium para siempre, con un solo pago.",
+        "Corrección de errores."
+      ]
+    },
     {
       "version": "2.0.33",
       "date": "2026-11-26",
